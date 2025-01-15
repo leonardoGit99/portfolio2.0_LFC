@@ -83,8 +83,8 @@ export const gridItems = [
 ];
 
 export const stackList = [[
-  "Next.js",
   "Tailwind CSS",
+  "Next.js",
   "TypeScript",
 ], [
   "Express.js",

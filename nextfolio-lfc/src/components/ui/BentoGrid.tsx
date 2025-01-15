@@ -110,19 +110,21 @@ export const BentoGridItem = ({
           {
             id === 3 && (
               <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-                <div className="flex flex-col gap-3 lg:gap-8">
+                <div className="flex flex-col md:gap-3 lg:gap-8">
                   {stackList[0].map((item, idx) => (
-                    <span key={idx} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                    <span key={idx} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                       {item}
                     </span>
                   ))
                   }
-                  <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+                  <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
                 </div>
                 <div className="flex flex-col gap-3 lg:gap-8">
-                  <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
+                  <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]" />
                   {stackList[1].map((item) => (
-                    <span key={item} className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                    <span key={item} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                       {item}
                     </span>
                   ))
@@ -135,7 +137,7 @@ export const BentoGridItem = ({
           {
             id === 6 && (
               <div className="mt-10 relative">
-                <div className={`absolute -bottom-5 sm:-bottom-5 md:-bottom-7 lg:-bottom-10 right-0`}>
+                <div className="absolute -bottom-5 sm:-bottom-5 md:-bottom-7 lg:-bottom-10 left-1/2 transform -translate-x-1/2 w-full md:w-[80%] lg:w-[85%]">
                   <CustomLottie />
                 </div>
               </div>
