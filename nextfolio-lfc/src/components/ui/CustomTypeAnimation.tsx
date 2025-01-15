@@ -1,22 +1,38 @@
-"use client"
-import { TypeAnimation } from 'react-type-animation';
+"use client";
+import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 function CustomTypeAnimation({ sequences }: { sequences: string[] }) {
+  const [isMounted, setIsMounted] = useState(false);
+  const delayTime = 3500; // Delay time before mounting
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsMounted(true);
+    }, delayTime);
+
+    return () => clearTimeout(timeout); // Cleanup on unmount
+  }, [delayTime]);
+
+  
+  if (!isMounted) {
+    return <span>a Software Developer|</span>; // O algún componente de carga
+  }
+
   return (
     <TypeAnimation
       sequence={[
-        // Same substring at the start will only be typed out once, initially
         sequences[0],
-        2000, // wait 1s before replacing "Mice" with "Hamsters"
+        1800, 
         sequences[1],
-        2000
+        1800, 
       ]}
       wrapper="span"
-      speed={58}
-      // style={{ fontSize: '2em', display: 'inline-block' }}
+      speed={73}
       repeat={Infinity}
-      className='md:tracking-wider text-sm md:tex-lg lg:text-2xl'
+      className="md:tracking-wider text-sm md:text-lg lg:text-2xl"
     />
   );
-};
+}
+
 export default CustomTypeAnimation;

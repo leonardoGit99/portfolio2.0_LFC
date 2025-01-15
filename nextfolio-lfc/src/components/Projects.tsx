@@ -7,7 +7,7 @@ function Projects() {
   return (
     <section className='pt-10 lg:pt-20' id={'projects'}>
       <h1 className='heading'>
-        A small selection of {' '}
+        A small selection of my {' '}
         <span className='text-[#00C6FF]'>recent projects</span>
       </h1>
       <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-7 mt-10'>

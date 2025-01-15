@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import animationData from '@/data/confetti.json';
 import Lottie from 'react-lottie';
 import MagicBtn from './MagicBtn';
-import { IoCopyOutline } from 'react-icons/io5';
+import { IoCloudDownload, IoCloudDownloadOutline, IoCodeDownloadSharp, IoCopyOutline, IoDownload, IoDownloadOutline, IoDownloadSharp } from 'react-icons/io5';
+import { IoIosDownload, IoMdDownload } from 'react-icons/io';
 
 function CustomLottie() {
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     setCopied(true);
-    navigator.clipboard.writeText('leonardofuentesclaros@gmail.com');
+    window.open("/Leonardo Fuentes Claros_CV.pdf");
   }
   return (
     <>
@@ -24,8 +25,8 @@ function CustomLottie() {
         }}
       />
         <MagicBtn
-          title={copied ? 'Email Copied!' : 'Copy my email'}
-          icon={<IoCopyOutline />}
+          title={copied ? 'CV opened!' : 'Download my CV'}
+          icon={<IoCloudDownloadOutline/>}
           position="left"
           otherClasses='!bg-[#161a31] lg:px-16'
           handleClick={handleCopy}
