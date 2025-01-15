@@ -26,7 +26,7 @@ async function setVisitCount(visits: number) {
 
 export async function GET() {
   let visitCount = await getVisitCount();
-  visitCount += 0.5;
+  visitCount += 1;
   await setVisitCount(visitCount);
   
   return NextResponse.json({ visits: visitCount });
