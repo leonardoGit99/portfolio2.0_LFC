@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GridGlobe } from "@/components/ui/GridGlobe";
-import { stackList } from "@/app/data";
+import { stackList } from "@/data/index";
 import CustomLottie from "./CustomLottie";
 
 export const BentoGrid = ({

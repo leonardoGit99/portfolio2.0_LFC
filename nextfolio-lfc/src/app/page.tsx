@@ -1,10 +1,11 @@
-import Grid from "@/components/Grid";
+import About from "@/components/About";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { navItems } from "./data";
+import { navItems } from "@/data/index";
+import Projects from "@/components/Projects";
 
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
@@ -12,7 +13,8 @@ export default function Home() {
           navItems={navItems}
         />
         <Hero />
-        <Grid/>
+        <About />
+        <Projects />
       </div>
     </main>
   );

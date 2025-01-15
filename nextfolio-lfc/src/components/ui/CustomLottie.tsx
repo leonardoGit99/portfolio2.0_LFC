@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import animationData from '@/app/data/confetti.json';
+import animationData from '@/data/confetti.json';
 import Lottie from 'react-lottie';
 import MagicBtn from './MagicBtn';
 import { IoCopyOutline } from 'react-icons/io5';
