@@ -147,37 +147,28 @@ export const projects = [
   },
 ];
 
-export const testimonials = [
+export const certifications = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    description:
+      "A comprehensive course covering the fundamentals of JavaScript, including ES6+ features, DOM manipulation, and asynchronous programming.",
+    issuer: "Meta & Coursera",
+    keyAchievement: "Programming with JavaScript",
+    img: "/meta.svg",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    description:
+      "This certification focuses on creating modern, responsive layouts using HTML, CSS, and Flexbox/Grid. It emphasizes building adaptable websites for various devices while ensuring optimal user experience.",
+    issuer: "freeCodeCamp",
+    keyAchievement: "Responsive Web Design",
+    img: "/freecodecamp-logo.svg",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+    description:
+      "This certification recognizes high proficiency in English at the B1-B2 level. It focuses on key skills such as speaking, listening, reading, and writing. Practical assessments ensure effective communication in diverse contexts.",
+    issuer: "Centro Boliviano Americano",
+    keyAchievement: "Achievement Test Certificate",
+    img: "/cba.png",
+  }
 ];
 
 export const companies = [

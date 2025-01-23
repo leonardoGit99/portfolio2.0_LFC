@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**', // Matches all paths
+      },
+    ],
   },
-  transpilePackages: ['three'],
+  transpilePackages: ['three'], // This remains unchanged
 };
 
 module.exports = nextConfig;

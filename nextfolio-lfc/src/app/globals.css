@@ -87,3 +87,20 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000319; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #A6D8FF);
+  border-radius: 12px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #7BB9FF);
+}
