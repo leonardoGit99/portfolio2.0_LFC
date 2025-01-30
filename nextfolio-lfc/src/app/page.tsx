@@ -4,6 +4,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data/index";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
+import Experience from "@/components/Experience";
 
 
 export default function Portfolio() {
@@ -17,6 +18,7 @@ export default function Portfolio() {
         <About />
         <Projects />
         <Certifications />
+        <Experience />
       </div>
     </main>
   );

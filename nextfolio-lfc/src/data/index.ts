@@ -207,29 +207,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Software Developer",
+    desc: "I worked on the project 'Academic Management of the Faculty of Science and Technology - UMSS', from the initial concept through UI design and database implementation, as well as leading my team.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+    title: "Frontend Developer",
+    desc: "I worked with No Country’s selected team, including developers, UX/UI designers, QA specialists, and a team lead from various countries, to develop a responsive web platform for a Argentina's secondary school.",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+    title: "Frontend Technologies",
+    desc: "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Backend Technologies",
+    desc: "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs ",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
