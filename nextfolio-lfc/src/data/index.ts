@@ -221,14 +221,14 @@ export const workExperience = [
   },
   {
     id: 3,
-    title: "Frontend Technologies",
+    title: "Frontend Development",
     desc: "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand",
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Backend Technologies",
+    title: "Backend Development",
     desc: "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs ",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",

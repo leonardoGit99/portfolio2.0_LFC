@@ -5,6 +5,7 @@ import { navItems } from "@/data/index";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Experience from "@/components/Experience";
+import Aproach from "@/components/Aproach";
 
 
 export default function Portfolio() {
@@ -19,6 +20,7 @@ export default function Portfolio() {
         <Projects />
         <Certifications />
         <Experience />
+        <Aproach />
       </div>
     </main>
   );
