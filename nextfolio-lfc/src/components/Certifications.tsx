@@ -4,7 +4,7 @@ import { companies, certifications } from '@/data'
 
 function Certifications() {
   return (
-    <section className='py-20' id='certifications'>
+    <section className='pt-20 relative' id='certifications'>
       <h1 className='heading'>
         My recent {' '}
         <span className='text-[#00C6FF]'>certifications</span>
@@ -16,7 +16,7 @@ function Certifications() {
             direction='left'
             speed='normal'
           />
-          <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10 mt-10'>
+          {/* <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10 mt-10'>
             {
               companies.map(({ id, img, name, nameImg }) => (
                 <div key={id} className='flex md:max-w-60 max-w-32 gap-2'>
@@ -25,7 +25,7 @@ function Certifications() {
                 </div>
               ))
             }
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { FaLocationArrow } from 'react-icons/fa'
 import { FaArrowRight } from 'react-icons/fa6'
 function Projects() {
   return (
-    <section className='pt-20' id={'projects'}>
+    <section className='pt-20 relative' id={'projects'}>
       <h1 className='heading'>
         A small selection of my {' '}
         <span className='text-[#00C6FF]'>recent projects</span>
@@ -62,7 +62,6 @@ function Projects() {
                   </p>
                   <FaArrowRight className='ms-3' color='#A0E7FF' />
                 </div>
-
               </div>
             </PinContainer>
           </div>

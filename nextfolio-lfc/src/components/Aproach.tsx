@@ -6,7 +6,7 @@ import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 
 function Aproach() {
   return (
-    <section className="w-full pt-20">
+    <section className="w-full pt-32 relative">
       <h1 className="heading">
         My <span className="text-[#00C6FF]">aproach</span>
       </h1>

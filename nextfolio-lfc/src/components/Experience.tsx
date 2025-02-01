@@ -4,7 +4,7 @@ import { Button } from './ui/MovingBorder'
 
 function Experience() {
   return (
-    <section className='py-20' id='experience'>
+    <section className='pt-20 relative' id='experience'>
       <h1 className='heading'>
         My {' '}
         <span className='text-[#00C6FF]'>experience</span>

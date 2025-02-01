@@ -4,7 +4,7 @@ import { gridItems } from '@/data/index'
 
 function About() {
   return (
-    <section className='pt-10 lg:pt-20' id="about" >
+    <section className='pt-10 lg:pt-20 relative' id="about" >
       <BentoGrid>
         {gridItems.map(({ id, title, description, className, img, imgClassName, titleClassName, spareImg }) => (
           <BentoGridItem
