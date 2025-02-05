@@ -1,8 +1,12 @@
+"use client"
 import React from 'react'
 import MagicBtn from './ui/MagicBtn'
 import { FaLocationArrow } from 'react-icons/fa'
 
 function Contact() {
+  const handleContactClick = () => {
+    window.open('mailto:leonardofuentesclaros@gmail.com')
+  }
   return (
     <section className='w-full pt-32 pb-32 relative' id='contact'>
       <div className='w-full absolute left-0 -bottom-72 min-h-96'>
@@ -17,7 +21,7 @@ function Contact() {
           Ready to take <span className='text-[#00C6FF]'>your</span> digital presence to the next level?
         </h1>
         <p className='text-white-200 md:mt-10 my-5 text-center'>Reach out to me today and let&apos; discuss how I can help you achieve your goals.</p>
-        <a href="mailto:leonardofuentesclaros@gmail.com">
+        <a onClick={()=> handleContactClick()}>
           <MagicBtn
             title="Let's get in touch"
             icon={<FaLocationArrow />}

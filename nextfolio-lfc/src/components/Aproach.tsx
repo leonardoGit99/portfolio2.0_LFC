@@ -14,7 +14,7 @@ function Aproach() {
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          description="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content.requirements."
+          description="We'll work together to define your website's objectives, audience, and essential features. We'll cover aspects like site layout, navigation, and content needs."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,7 +24,7 @@ function Aproach() {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          description="Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way."
+          description="Once the plan is set, I focus on coding, ensuring a smooth workflow from initial drafts to final code, keeping you updated every step of the way."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -39,7 +39,7 @@ function Aproach() {
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          description="This is where the magic happens! Baseed on the aproved design and functionalities, I'll translate everything into functional code, building your website from the ground up."
+          description="This is where the work comes to life! Using the approved design and features, I’ll turn everything into functional code, creating your website from the ground up."
         >
           <CanvasRevealEffect
             animationSpeed={3}
