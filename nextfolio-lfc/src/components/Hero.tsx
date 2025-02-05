@@ -10,6 +10,7 @@ import profilePhoto from "../../public/leonardo-fuentes-claros.webp";
 import CustomTypeAnimation from '@/components/ui/CustomTypeAnimation';
 import VisitCounter from './VisitCounter'
 function Hero() {
+  
   return (
     <section className='pb-20'> {/* pt-36 */}
       <div>
