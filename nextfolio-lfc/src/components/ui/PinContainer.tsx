@@ -10,19 +10,22 @@ export const PinContainer = ({
   href,
   className,
   containerClassName,
+  state
 }: {
   children: React.ReactNode;
   title?: string;
   href?: string;
   className?: string;
   containerClassName?: string;
+  state: boolean
 }) => {
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
   );
 
   const onMouseEnter = () => {
-    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    if (state === false) return;
+      setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
   };
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
@@ -32,11 +35,17 @@ export const PinContainer = ({
     <Link
       className={cn(
         "relative group/pin z-50  cursor-pointer",
+        state === true ? "cursor-pointer" : "cursor-not-allowed opacity-50",
         containerClassName
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}
+      onClick={(e) => {
+        if (!state) {
+          e.preventDefault(); // Bloquea navegación si state es false
+        }
+      }}
+      href={state === true ? href || "/" : "#"}
     >
       <div
         style={{
@@ -54,7 +63,7 @@ export const PinContainer = ({
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <PinPerspective title={title} href={href} state={state}/>
     </Link>
   );
 };
@@ -62,12 +71,15 @@ export const PinContainer = ({
 export const PinPerspective = ({
   title,
   href,
+  state
 }: {
   title?: string;
   href?: string;
+  state: boolean
 }) => {
   return (
-    <motion.div className="pointer-events-none  w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    state === true && (
+      <motion.div className="pointer-events-none  w-full h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
           <div
@@ -159,6 +171,7 @@ export const PinPerspective = ({
           <motion.div className="absolute right-1/2 translate-x-[0.5px] bottom-1/2 bg-cyan-300 translate-y-[14px] w-[2px] h-[2px] rounded-full z-40 " />
         </>
       </div>
-    </motion.div>
+    </motion.div> 
+    )
   );
 };

@@ -97,6 +97,7 @@ export const projects = [
     id: 1,
     title: "Academic Connection",
     description: "Academic Connection is a web application designed to connect students and parents with secondary schools.",
+    state: true,
     img: "/conexion-academica.webp",
     imgRotation: {
       transform: 'rotate(2.6deg)',
@@ -110,6 +111,7 @@ export const projects = [
     id: 2,
     title: "TaskFlow",
     description: "Task management platform designed to simplify daily life. With an intuitive and efficient interface, you can create, read, update and delete tasks with ease.",
+    state: false,
     img: "/taskflow.png",
     imgRotation: {
       transform: 'rotate(3deg)',
@@ -123,6 +125,7 @@ export const projects = [
     id: 3,
     title: "EzRental",
     description: "A property rental platform inspired by Airbnb, allowing users to search, book, and manage stays intuitively. It features search filters, user profiles, and a booking system for a seamless experience.",
+    state: false,
     img: "/ezrental.jpg",
     imgRotation: {
       transform: 'rotate(3deg)',
@@ -136,6 +139,7 @@ export const projects = [
     id: 4,
     title: "BettyStore",
     description: "A Point of Sale (POS) system developed for a local store, enabling efficient sales management, inventory tracking, and customer management. ",
+    state: false,
     img: "/bettystore.png",
     imgRotation: {
       transform: 'rotate(2.6deg)',
