@@ -18,5 +18,34 @@
     "certifications": "Certificaciones",
     "experience": "Experiencia",
     "contact": "Contacto"
+  },
+  "about": {
+    "gridItemsLabels": {
+      "item1": {
+        "title": "Priorizo la colaboración con el cliente, promoviendo una comunicación clara y abierta",
+        "description": ""
+      },
+      "item2": {
+        "title": "¡Disponible para contactar contigo, estés donde estés!",
+        "description": ""
+      },
+      "item3": {
+        "title": "Mi stack tecnológico",
+        "description": "Siempre estoy buscando formas de mejorar"
+      },
+      "item4": {
+        "title": "Apasionado por la tecnología y el desarrollo de SW",
+        "description": ""
+      },
+      "item5": {
+        "title": "Disponible para trabajos freelance y abierto a nuevas oportunidades",
+        "description": "Información exclusiva"
+      },
+      "item6": {
+        "title": "¿Quieres empezar un proyecto juntos?",
+        "description": ""
+      }
+    },
+    "buttonLabel": "Descarga mi CV"
   }
 }

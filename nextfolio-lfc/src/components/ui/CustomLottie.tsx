@@ -4,13 +4,13 @@ import Lottie from 'react-lottie';
 import MagicBtn from './MagicBtn';
 import { IoCloudDownloadOutline, } from 'react-icons/io5';
 
-function CustomLottie() {
+function CustomLottie({btnLabel}: { btnLabel?: string }) {
   const handleOpen = () => {
     window.open("/Leonardo Fuentes Claros_CV.pdf");
   }
   return (
     <MagicBtn
-      title={'Download my CV'}
+      title={btnLabel || ""}
       icon={<IoCloudDownloadOutline />}
       position="left"
       otherClasses='!bg-[#161a31]'

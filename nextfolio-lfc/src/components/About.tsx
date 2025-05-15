@@ -1,8 +1,12 @@
 import React from 'react'
 import { BentoGrid, BentoGridItem } from '@/components/ui/BentoGrid'
-import { gridItems } from '@/data/index'
+import { getInfoGridItems, } from '@/data/index'
+import { useTranslations } from 'next-intl'
 
 function About() {
+  const t = useTranslations('about');
+  const gridItems = getInfoGridItems(t);
+  const btnLabel = t('buttonLabel');
   return (
     <section className='pt-10 lg:pt-20 relative' id="about" >
       <BentoGrid>
@@ -17,6 +21,7 @@ function About() {
             imgClassName={imgClassName}
             titleClassName={titleClassName}
             spareImg={spareImg}
+            btnLabel={btnLabel}
           />
         ))}
       </BentoGrid>

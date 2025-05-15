@@ -31,7 +31,8 @@ export const BentoGridItem = ({
   img,
   imgClassName,
   titleClassName,
-  spareImg
+  spareImg,
+  btnLabel
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -43,6 +44,7 @@ export const BentoGridItem = ({
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
+  btnLabel?: string;
 }) => {
   return (
     <div
@@ -138,7 +140,7 @@ export const BentoGridItem = ({
             id === 6 && (
               <div className="mt-10 relative">
                 <div className="absolute -bottom-5 sm:-bottom-5 md:-bottom-7 lg:-bottom-10 left-1/2 transform -translate-x-1/2 w-full md:w-[80%] lg:w-[85%]">
-                  <CustomLottie />
+                  <CustomLottie btnLabel={btnLabel}/>
                 </div>
               </div>
             )

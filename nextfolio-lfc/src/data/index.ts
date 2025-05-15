@@ -21,10 +21,10 @@ export const getNavItems = (t: (key: string) => string) => [
   },
 ];
 
-export const gridItems = [
+export const getInfoGridItems = (t: (key: string) => string) => [
   {
     id: 1,
-    title: "I prioritize client collaboration, promoting open communication ",
+    title: t("gridItemsLabels.item1.title"),
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -34,7 +34,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm ready to connect, no matter where you are!",
+    title: t("gridItemsLabels.item2.title"),
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -44,8 +44,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I’m always seeking ways to improve",
+    title: t("gridItemsLabels.item3.title"),
+    description: t("gridItemsLabels.item3.description"),
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -54,7 +54,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast driven by a passion for development",
+    title: t("gridItemsLabels.item4.title"),
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -65,8 +65,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Available for freelance work and open to new opportunities",
-    description: "The Inside Scoop",
+    title: t("gridItemsLabels.item5.title"),
+    description: t("gridItemsLabels.item5.description"),
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -75,7 +75,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: t("gridItemsLabels.item6.title"),
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1 py-0 md:py-5 lg:py-10",
     imgClassName: "",

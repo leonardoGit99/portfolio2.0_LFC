@@ -18,5 +18,34 @@
     "certifications": "Certifications",
     "experience": "Experience",
     "contact": "Contact"
+  },
+  "about": {
+    "gridItemsLabels": {
+      "item1": {
+        "title": "I prioritize client collaboration, promoting open communication",
+        "description": ""
+      },
+      "item2": {
+        "title": "I'm ready to connect, no matter where you are!",
+        "description": ""
+      },
+      "item3": {
+        "title": "My tech stack",
+        "description": "I’m always seeking ways to improve"
+      },
+      "item4": {
+        "title": "Tech enthusiast driven by a passion for development",
+        "description": ""
+      },
+      "item5": {
+        "title": "Available for freelance work and open to new opportunities",
+        "description": "The Inside Scoop"
+      },
+      "item6": {
+        "title": "Do you want to start a project together?",
+        "description": ""
+      }
+    },
+    "buttonLabel": "Download my CV"
   }
 }
