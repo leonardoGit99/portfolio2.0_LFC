@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 
-const VisitCounter: React.FC = () => {
+const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ viewsLabel, loadingLabel }) => {
   const [visitCount, setVisitCount] = useState<number | null>(null);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const VisitCounter: React.FC = () => {
   return (
     <div>
       <h2 className="uppercase tracking-widest text-xs text-center text-blue-100  max-w-80">
-        Views: <span className='text-[#A0E7FF] font-semibold'> {visitCount !== null ? visitCount : "Loading..."} </span>
+        {viewsLabel}: <span className='text-[#A0E7FF] font-semibold'> {visitCount !== null ? visitCount : loadingLabel} </span>
       </h2>
     </div>
   );

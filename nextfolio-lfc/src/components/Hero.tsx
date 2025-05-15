@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import Link from 'next/link'
@@ -9,8 +9,10 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import profilePhoto from "../../public/leonardo-fuentes-claros.webp";
 import CustomTypeAnimation from '@/components/ui/CustomTypeAnimation';
 import VisitCounter from './VisitCounter'
+import { useTranslations } from 'next-intl'
+
 function Hero() {
-  
+  const t = useTranslations('hero');
   return (
     <section className='pb-20'> {/* pt-36 */}
       <div>
@@ -25,24 +27,28 @@ function Hero() {
           <div className='max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center'>
             {/* Subtitle */}
             <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-              Crafting Digital Experiences
+              {t("tagline")}
             </h2>
-            <VisitCounter />
+            <VisitCounter
+              viewsLabel={t("viewsLabel")}
+              loadingLabel={t("loadingLabel")}
+            />
             {/* Title */}
             <TextGenerateEffect
               className='text-center text-[40px] md:text-5xl lg:text-6xl'
-              words='Welcome to my portfolio'
+              words={t("mainTitle")}
             />
             {/* Paragraph */}
             <div className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl flex flex-wrap justify-center items-center gap-1">
-              <span>Hi, I&apos;m Leonardo, </span>
+              <span>{t("typeAnimationText.staticOne")}</span>
               <CustomTypeAnimation
                 sequences={[
-                  "a Systems Engineer",
-                  "a Software Developer"
+                  t("typeAnimationText.animationOne"),
+                  t("typeAnimationText.animationTwo")
                 ]}
+                staticText={t("typeAnimationText.animationTwo")}
               />
-              <span>based in Bolivia.</span>
+              <span>{t("typeAnimationText.staticTwo")}</span>
             </div>
             {/* Avatar */}
             <CardContainer className="inter-var mb-6 md:mb-0">
@@ -58,7 +64,7 @@ function Hero() {
             </CardContainer>
             <Link href={'#about'}>
               <MagicBtn
-                title='Explore my work'
+                title={t("buttonText")}
                 icon={<FaLocationArrow />}
                 position='right'
               />

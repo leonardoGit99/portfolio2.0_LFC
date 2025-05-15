@@ -1,19 +1,31 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from '../../i18n/routing';
+import { notFound } from "next/navigation";
+import "../../app/globals.css";
 
 export const metadata: Metadata = {
   title: "Leonardo Fuentes Claros Portfolio",
   description: "Portfolio of LFC - Nextjs - TailwindCSS - Typescript - Frame Motion - Acernity UI - Next themes - React - react icons",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+
+  // Ensure that the incoming `locale` is valid
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
@@ -21,9 +33,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <NextIntlClientProvider>
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>
+
   );
 }

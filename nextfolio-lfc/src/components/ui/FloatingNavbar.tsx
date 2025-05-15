@@ -8,20 +8,19 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { getNavItems } from "@/data";
 
 export const FloatingNav = ({
-  navItems,
   className,
 }: {
-  navItems: {
-    name: string;
-    link: string;
-    icon?: React.ReactNode;
-  }[];
   className?: string;
 }) => {
-  const { scrollYProgress } = useScroll();
+  //Translations
+  const t = useTranslations('nav')
+  const navItems = getNavItems(t)
 
+  const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {

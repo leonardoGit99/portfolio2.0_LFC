@@ -34,7 +34,7 @@
     "next-env.d.ts",
     "src/app/types/**/*.d.ts",
     ".next/types/**/*.ts"
-, "next.config.js"  ],
+, "next.config.js", "src/i18n/request.ts"  ],
   "exclude": [
     "node_modules"
   ]

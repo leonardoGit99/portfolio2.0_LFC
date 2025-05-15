@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "mainTitle": "Welcome to my portfolio",
+    "typeAnimationText": {
+      "staticOne": "Hi, I'm Leonardo, ",
+      "animationOne": "a Systems Engineer",
+      "animationTwo": "a Software Developer",
+      "staticTwo": "based in Bolivia."
+    },
+    "tagline": "CRAFTING DIGITAL EXPERIENCES",
+    "viewsLabel": "VIEWS",
+    "loadingLabel": "Loading...",
+    "buttonText": "Explore my work"
+  },
+  "nav": {
+    "about": "About Me",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "experience": "Experience",
+    "contact": "Contact"
+  }
+}

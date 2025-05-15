@@ -1,15 +1,22 @@
-/** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require('next-intl/plugin');
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
-        pathname: '/**', // Matches all paths
+        pathname: '/**',
       },
     ],
   },
-  transpilePackages: ['three'], // This remains unchanged
+  transpilePackages: ['three'],
 };
 
-module.exports = nextConfig;
+const withNextIntl = createNextIntlPlugin({
+  defaultLocale: 'en',
+  locales: ['en', 'es'],
+  path: './messages',
+});
+
+module.exports = withNextIntl(nextConfig);

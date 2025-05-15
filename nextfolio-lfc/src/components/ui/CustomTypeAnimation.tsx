@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-function CustomTypeAnimation({ sequences }: { sequences: string[] }) {
+function CustomTypeAnimation({ sequences, staticText,  }: { sequences: string[], staticText: string }) {
   const [isMounted, setIsMounted] = useState(false);
   const delayTime = 3500; // Delay time before mounting
 
@@ -16,7 +16,7 @@ function CustomTypeAnimation({ sequences }: { sequences: string[] }) {
 
   
   if (!isMounted) {
-    return <span>a Software Developer|</span>; // O algún componente de carga
+    return <span>{staticText}|</span>; // O algún componente de carga
   }
 
   return (

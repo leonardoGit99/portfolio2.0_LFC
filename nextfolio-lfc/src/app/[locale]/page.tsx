@@ -1,5 +1,4 @@
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { navItems } from "@/data/index";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
@@ -9,22 +8,20 @@ import Aproach from "@/components/Aproach";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-
 export default function Portfolio() {
+
   return (
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
-        <FloatingNav
-          navItems={navItems}
-        />
+        <FloatingNav />
         <Hero />
         <About />
         <Projects />
         <Certifications />
         <Experience />
         <Aproach />
-        <Contact/>
-        <Footer/>
+        <Contact />
+        <Footer />
       </div>
     </main>
   );

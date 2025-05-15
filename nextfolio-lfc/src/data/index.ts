@@ -1,21 +1,24 @@
-export const navItems = [
+export const getNavItems = (t: (key: string) => string) => [
   {
-    name: "About",
+    name: t("about"),
     link: "#about",
   },
   {
-    name: "Projects",
+    name: t("projects"),
     link: "#projects",
-  }, {
-    name: "Certifications",
+  },
+  {
+    name: t("certifications"),
     link: "#certifications",
-  }, {
-    name: "Experience",
+  },
+  {
+    name: t("experience"),
     link: "#experience",
-  }, {
-    name: "Contact",
+  },
+  {
+    name: t("contact"),
     link: "#contact",
-  }
+  },
 ];
 
 export const gridItems = [
