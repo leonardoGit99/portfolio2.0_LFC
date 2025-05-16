@@ -68,5 +68,21 @@
       "title": "BettyStore",
       "description": "Un sistema de punto de venta (POS) desarrollado para una tienda local, diseñado para optimizar las ventas, gestionar el inventario y administrar eficientemente las relaciones con los clientes."
     }
+  },
+  "certifications": {
+    "sectionTitlePrefix": "Mis recientes",
+    "sectionTitleHighlight": "certificaciones",
+    "certificationOne": {
+      "title": "Programando con JavaScript",
+      "description": "Un curso completo que abarca los fundamentos de JavaScript, incluyendo características de ES6+, manipulación del DOM y programación asíncrona."
+    },
+    "certificationTwo": {
+      "title": "Diseño web adaptable",
+      "description": "Esta certificación se centra en la creación de diseños modernos y adaptables utilizando HTML, CSS y Flexbox/Grid. Pone énfasis en construir sitios web que se ajusten a diferentes dispositivos, garantizando una experiencia de usuario óptima."
+    },
+    "certificationThree": {
+      "title": "Achievement Test Certificate",
+      "description": "Esta certificación reconoce un alto dominio del inglés en el nivel B1-B2. Se centra en las habilidades de hablar, escuchar, leer y escribir. Las evaluaciones prácticas aseguran una comunicación efectiva en diversos contextos."
+    }
   }
 }

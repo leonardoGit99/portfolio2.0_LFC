@@ -1,13 +1,16 @@
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
-import { companies, certifications } from '@/data'
+import { companies, getCertifications } from '@/data'
+import { useTranslations } from 'next-intl'
 
 function Certifications() {
+  const t = useTranslations('certifications');
+  const  certifications= getCertifications(t);
   return (
     <section className='pt-20 relative' id='certifications'>
       <h1 className='heading'>
-        My recent {' '}
-        <span className='text-[#00C6FF]'>certifications</span>
+        {t("sectionTitlePrefix")} {' '}
+        <span className='text-[#00C6FF]'>{t("sectionTitleHighlight")}</span>
       </h1>
       <div className='flex flex-col items-center mt-20'>
         <div className='h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased items-center relative overflow-hidden'>

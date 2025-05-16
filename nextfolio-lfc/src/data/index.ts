@@ -154,26 +154,23 @@ export const getProjects = (t: (key: string) => string) =>[
   },
 ];
 
-export const certifications = [
+export const getCertifications = (t: (key: string) => string) =>[
   {
-    description:
-      "A comprehensive course covering the fundamentals of JavaScript, including ES6+ features, DOM manipulation, and asynchronous programming.",
+    description: t("certificationOne.description"),
     issuer: "Meta & Coursera",
-    keyAchievement: "Programming with JavaScript",
+    keyAchievement: t("certificationOne.title"),
     img: "/meta.svg",
   },
   {
-    description:
-      "This certification focuses on creating modern, responsive layouts using HTML, CSS, and Flexbox/Grid. It emphasizes building adaptable websites for various devices while ensuring optimal user experience.",
+    description: t("certificationTwo.description"),
     issuer: "freeCodeCamp",
-    keyAchievement: "Responsive Web Design",
+    keyAchievement: t("certificationTwo.title"),
     img: "/freecodecamp-logo.svg",
   },
   {
-    description:
-      "This certification recognizes high proficiency in English at the B1-B2 level. It focuses on key skills such as speaking, listening, reading, and writing. Practical assessments ensure effective communication in diverse contexts.",
+    description: t("certificationThree.description"),
     issuer: "Centro Boliviano Americano",
-    keyAchievement: "Achievement Test Certificate",
+    keyAchievement: t("certificationThree.title"),
     img: "/cba.png",
   }
 ];
