@@ -3,8 +3,8 @@
     "mainTitle": "Bienvenido a mi portafolio",
     "typeAnimationText": {
       "staticOne": "Hola, soy Leonardo, ",
-      "animationOne": "Ingeniero de Sistemas",
-      "animationTwo": "Desarollador de Software",
+      "animationOne": "ingeniero de sistemas",
+      "animationTwo": "desarrollador de software",
       "staticTwo": "establecido en Bolivia."
     },
     "tagline": "CREANDO EXPERIENCIAS DIGITALES",
@@ -22,7 +22,7 @@
   "about": {
     "gridItemsLabels": {
       "item1": {
-        "title": "Priorizo la colaboración con el cliente, promoviendo una comunicación clara y abierta",
+        "title": "Priorizo la colaboración con el cliente y fomento una comunicación clara y abierta",
         "description": ""
       },
       "item2": {
@@ -42,7 +42,7 @@
         "description": "Información exclusiva"
       },
       "item6": {
-        "title": "¿Quieres empezar un proyecto juntos?",
+        "title": "¿Empezamos un proyecto juntos?",
         "description": ""
       }
     },
