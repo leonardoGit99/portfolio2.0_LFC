@@ -3,18 +3,23 @@ import React from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
+import { useTranslations } from 'next-intl'
+import { getApproachItems } from "@/data";
 
 function Aproach() {
+  const t = useTranslations('aproach');
+  const aproach = getApproachItems(t);
+
   return (
     <section className="w-full pt-32 relative">
       <h1 className="heading">
-        My <span className="text-[#00C6FF]">aproach</span>
+        {t("sectionTitlePrefix")} <span className="text-[#00C6FF]">{t("sectionTitleHighlight")}</span>
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
-          title="Planning & Strategy"
-          icon={<AceternityIcon order="Phase 1" />}
-          description="We'll work together to define your website's objectives, audience, and essential features. We'll cover aspects like site layout, navigation, and content needs."
+          title={aproach[0].title}
+          icon={<AceternityIcon order={t("phaseOneLabel")} />}
+          description={aproach[0].description}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -22,9 +27,9 @@ function Aproach() {
           />
         </Card>
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2" />}
-          description="Once the plan is set, I focus on coding, ensuring a smooth workflow from initial drafts to final code, keeping you updated every step of the way."
+          title={aproach[1].title}
+          icon={<AceternityIcon order={t("phaseTwoLabel")} />}
+          description={aproach[1].description}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -37,9 +42,9 @@ function Aproach() {
           />
         </Card>
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3" />}
-          description="This is where the work comes to life! Using the approved design and features, I’ll turn everything into functional code, creating your website from the ground up."
+          title={aproach[2].title}
+          icon={<AceternityIcon order={t("phaseThreeLabel")} />}
+          description={aproach[2].description}
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -95,7 +100,7 @@ const Card = ({
           {title}
         </h2>
         <h3 className="dark:text-white text-sm opacity-0 group-hover/canvas-card:opacity-100 relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white group-hover/canvas-card:-translate-y-2 transition duration-200"
-          style={{color: '#e4ecff'}}
+          style={{ color: '#e4ecff' }}
         >
           {description}
         </h3>

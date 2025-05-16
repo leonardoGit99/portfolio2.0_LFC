@@ -239,6 +239,24 @@ export const getWorkExperience = (t: (key: string) => string) => [
   },
 ];
 
+export const getApproachItems = (t: (key: string) => string) => [
+  {
+    id: 1,
+    title: t("phases.phaseOne.title"),
+    description: t("phases.phaseOne.description")
+  },
+  {
+    id: 2,
+    title: t("phases.phaseTwo.title"),
+    description: t("phases.phaseTwo.description")
+  },
+  {
+    id: 3,
+    title: t("phases.phaseThree.title"),
+    description: t("phases.phaseThree.description")
+  },
+]
+
 export const socialMedia = [
   {
     id: 1,

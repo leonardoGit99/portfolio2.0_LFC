@@ -104,5 +104,26 @@
       "title": "Desarrollo Backend",
       "description": "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs"
     }
+  },
+  "aproach": {
+    "sectionTitlePrefix": "Mi",
+    "sectionTitleHighlight": "enfoque",
+    "phaseOneLabel": "Fase 1",
+    "phaseTwoLabel": "Fase 2",
+    "phaseThreeLabel": "Fase 3",
+    "phases": {
+      "phaseOne": {
+        "title": "Planificación y Estrategia",
+        "description": "Trabajaremos juntos para definir los objetivos de tu sitio web, el público al que va dirigido y las funciones esenciales. Abordaremos aspectos como la estructura del sitio, la navegación y las necesidades de contenido."
+      },
+      "phaseTwo": {
+        "title": "Desarrollo y Actualización de Progreso",
+        "description": "Una vez definido el plan, me enfoco en la programación, asegurando un flujo de trabajo fluido desde los primeros borradores hasta el código final, manteniéndote informado en cada etapa."
+      },
+      "phaseThree": {
+        "title": "Desarrollo y Lanzamiento",
+        "description": "¡Aquí es donde el trabajo cobra vida! Usando el diseño y las funcionalidades aprobadas, convertiré todo en código funcional, creando tu sitio web desde cero."
+      }
+    }
   }
 }

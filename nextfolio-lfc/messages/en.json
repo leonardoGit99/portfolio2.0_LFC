@@ -104,5 +104,26 @@
       "title": "Backend Development",
       "description": "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs"
     }
+  },
+  "aproach": {
+    "sectionTitlePrefix": "My",
+    "sectionTitleHighlight": "approach",
+    "phaseOneLabel": "Phase 1",
+    "phaseTwoLabel": "Phase 2",
+    "phaseThreeLabel": "Phase 3",
+    "phases": {
+      "phaseOne": {
+        "title": "Planning & Strategy",
+        "description": "We'll work together to define your website's objectives, audience, and essential features. We'll cover aspects like site layout, navigation, and content needs."
+      },
+      "phaseTwo": {
+        "title": "Development & Progress Update",
+        "description": "Once the plan is set, I focus on coding, ensuring a smooth workflow from initial drafts to final code, keeping you updated every step of the way."
+      },
+      "phaseThree": {
+        "title": "Development & Launch",
+        "description": "This is where the work comes to life! Using the approved design and features, I’ll turn everything into functional code, creating your website from the ground up."
+      }
+    }
   }
 }
