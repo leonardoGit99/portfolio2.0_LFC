@@ -95,11 +95,11 @@ export const stackList = [[
   "Firebase",
 ]]
 
-export const projects = [
+export const getProjects = (t: (key: string) => string) =>[
   {
     id: 1,
-    title: "Academic Connection",
-    description: "Academic Connection is a web application designed to connect students and parents with secondary schools.",
+    title: t("firstProject.title"),
+    description: t("firstProject.description"),
     state: true,
     img: "/conexion-academica.webp",
     imgRotation: {
@@ -112,8 +112,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: "TaskFlow",
-    description: "Task management platform designed to simplify daily life. With an intuitive and efficient interface, you can create, read, update and delete tasks with ease.",
+    title: t("secondProject.title"),
+    description: t("secondProject.description"),
     state: false,
     img: "/taskflow.png",
     imgRotation: {
@@ -126,8 +126,8 @@ export const projects = [
   },
   {
     id: 3,
-    title: "EzRental",
-    description: "A property rental platform inspired by Airbnb, allowing users to search, book, and manage stays intuitively. It features search filters, user profiles, and a booking system for a seamless experience.",
+    title: t("thirdProject.title"),
+    description: t("thirdProject.description"),
     state: false,
     img: "/ezrental.jpg",
     imgRotation: {
@@ -140,8 +140,8 @@ export const projects = [
   },
   {
     id: 4,
-    title: "BettyStore",
-    description: "A Point of Sale (POS) system developed for a local store, enabling efficient sales management, inventory tracking, and customer management. ",
+    title: t("fourthProject.title"),
+    description: t("fourthProject.description"),
     state: false,
     img: "/bettystore.png",
     imgRotation: {

@@ -47,5 +47,26 @@
       }
     },
     "buttonLabel": "Descarga mi CV"
+  },
+  "projects": {
+    "sectionTitlePrefix": "Una pequeña selección de mis ",
+    "sectionTitleHighlight": "proyectos",
+    "checkButtonLabel": "Visitar sitio web",
+    "firstProject": {
+      "title": "Conexión Académica",
+      "description": "Conexión Académica es una aplicación web diseñada para conectar estudiantes y padres con colegios secundarios"
+    },
+    "secondProject": {
+      "title": "TaskFlow",
+      "description": "Plataforma de gestión de tareas diseñada para simplificar la vida diaria. Con una interfaz intuitiva y eficiente, puedes crear, leer, actualizar y eliminar tareas con facilidad."
+    },
+    "thirdProject": {
+      "title": "EzRental",
+      "description": "Sistema de gestión de alquileres diseñado para facilitar la administración de propiedades en alquiler. Con una interfaz fácil de usar, puedes gestionar inquilinos, pagos y contratos de manera eficiente."
+    },
+    "fourthProject": {
+      "title": "BettyStore",
+      "description": "Un sistema de punto de venta (POS) desarrollado para una tienda local, diseñado para optimizar las ventas, gestionar el inventario y administrar eficientemente las relaciones con los clientes."
+    }
   }
 }

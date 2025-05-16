@@ -1,14 +1,17 @@
 import React from 'react'
-import { projects } from '@/data/index'
+import { getProjects } from '@/data/index'
 import { PinContainer } from './ui/PinContainer'
 import { FaLocationArrow } from 'react-icons/fa'
 import { FaArrowRight } from 'react-icons/fa6'
+import { useTranslations } from 'next-intl'
 function Projects() {
+  const t = useTranslations('projects');
+  const projects = getProjects(t);
   return (
     <section className='pt-20 relative' id={'projects'}>
       <h1 className='heading'>
-        A small selection of my {' '}
-        <span className='text-[#00C6FF]'>recent projects</span>
+        {t("sectionTitlePrefix")} {' '}
+        <span className='text-[#00C6FF]'>{t("sectionTitleHighlight")}</span>
       </h1>
       <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-7 mt-10'>
         {projects.map(({
@@ -60,7 +63,7 @@ function Projects() {
                 </div>
                 <div className='flex justify-center items-center'>
                   <p className='flex lg:text-xl md:text-xs text-sm text-[#A0E7FF]'>
-                    Check Live Site
+                    {t("checkButtonLabel")}
                   </p>
                   <FaArrowRight className='ms-3' color='#A0E7FF' />
                 </div>
