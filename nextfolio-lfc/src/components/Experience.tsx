@@ -1,13 +1,17 @@
-import { workExperience } from '@/data'
+import { getWorkExperience } from '@/data'
 import React from 'react'
 import { Button } from './ui/MovingBorder'
+import { useTranslations } from 'next-intl'
+
 
 function Experience() {
+  const t = useTranslations('experience');
+  const workExperience = getWorkExperience(t);
   return (
     <section className='pt-20 relative' id='experience'>
       <h1 className='heading'>
-        My {' '}
-        <span className='text-[#00C6FF]'>experience</span>
+        {t("sectionTitlePrefix")} {' '}
+        <span className='text-[#00C6FF]'>{t("sectionTitleHighlight")}</span>
       </h1>
       <div className='w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10'>
         {

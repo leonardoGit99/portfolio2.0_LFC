@@ -84,5 +84,25 @@
       "title": "Achievement Test Certificate",
       "description": "Esta certificación reconoce un alto dominio del inglés en el nivel B1-B2. Se centra en las habilidades de hablar, escuchar, leer y escribir. Las evaluaciones prácticas aseguran una comunicación efectiva en diversos contextos."
     }
+  },
+  "experience": {
+    "sectionTitlePrefix": "Mi",
+    "sectionTitleHighlight": "experiencia",
+    "experienceOne": {
+      "title": "Desarrollador de Software",
+      "description": "Trabajé en el proyecto 'Gestión Académica de la Facultad de Ciencias y Tecnología - UMSS', desde el concepto inicial hasta el diseño de la interfaz de usuario y la implementación de la base de datos, además de liderar a mi equipo."
+    },
+    "experienceTwo": {
+      "title": "Desarrollador Frontend",
+      "description": "Trabajé con el equipo seleccionado de No Country, compuesto por desarrolladores, diseñadores UX/UI, especialistas en QA y un líder de equipo de distintos países, para desarrollar una plataforma web responsiva para una escuela secundaria de Argentina."
+    },
+    "experienceThree": {
+      "title": "Desarollo Frontend",
+      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand"
+    },
+    "experienceFour": {
+      "title": "Desarrollo Backend",
+      "description": "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs"
+    }
   }
 }

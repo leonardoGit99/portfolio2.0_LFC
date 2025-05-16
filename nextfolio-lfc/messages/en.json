@@ -84,5 +84,25 @@
       "title": "Achievement Test Certificate",
       "description": "This certification recognizes high proficiency in English at the B1-B2 level. It focuses on key skills such as speaking, listening, reading, and writing. Practical assessments ensure effective communication in diverse contexts."
     }
+  },
+  "experience": {
+    "sectionTitlePrefix": "My",
+    "sectionTitleHighlight": "experience",
+    "experienceOne": {
+      "title": "Software Developer",
+      "description": "I worked on the project 'Academic Management of the Faculty of Science and Technology - UMSS', from the initial concept through UI design and database implementation, as well as leading my team."
+    },
+    "experienceTwo": {
+      "title": "Frontend Developer",
+      "description": "I worked with No Country’s selected team, including developers, UX/UI designers, QA specialists, and a team lead from various countries, to develop a responsive web platform for a Argentina's secondary school."
+    },
+    "experienceThree": {
+      "title": "Frontend Development",
+      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand"
+    },
+    "experienceFour": {
+      "title": "Backend Development",
+      "description": "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs"
+    }
   }
 }

@@ -95,7 +95,7 @@ export const stackList = [[
   "Firebase",
 ]]
 
-export const getProjects = (t: (key: string) => string) =>[
+export const getProjects = (t: (key: string) => string) => [
   {
     id: 1,
     title: t("firstProject.title"),
@@ -134,7 +134,7 @@ export const getProjects = (t: (key: string) => string) =>[
       transform: 'rotate(3deg)',
       transformOrigin: '190px 0'
     },
-    iconLists: ["/re.svg", "/ant-design.svg", "/firebase.svg", "/node.svg", "/postgresql.svg","/gdrive.svg"],
+    iconLists: ["/re.svg", "/ant-design.svg", "/firebase.svg", "/node.svg", "/postgresql.svg", "/gdrive.svg"],
     liveDemoLink: "https://ez-rental-kinsta-front.vercel.app",
     GithubLink: "https://github.com/leonardoGit99/EzRental",
   },
@@ -154,7 +154,7 @@ export const getProjects = (t: (key: string) => string) =>[
   },
 ];
 
-export const getCertifications = (t: (key: string) => string) =>[
+export const getCertifications = (t: (key: string) => string) => [
   {
     description: t("certificationOne.description"),
     issuer: "Meta & Coursera",
@@ -208,32 +208,32 @@ export const companies = [
   },
 ];
 
-export const workExperience = [
+export const getWorkExperience = (t: (key: string) => string) => [
   {
     id: 1,
-    title: "Software Developer",
-    desc: "I worked on the project 'Academic Management of the Faculty of Science and Technology - UMSS', from the initial concept through UI design and database implementation, as well as leading my team.",
+    title: t("experienceOne.title"),
+    desc: t("experienceOne.description"),
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    desc: "I worked with No Country’s selected team, including developers, UX/UI designers, QA specialists, and a team lead from various countries, to develop a responsive web platform for a Argentina's secondary school.",
+    title: t("experienceTwo.title"),
+    desc: t("experienceTwo.description"),
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Frontend Development",
-    desc: "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand",
+    title: t("experienceThree.title"),
+    desc: t("experienceThree.description"),
     className: "md:col-span-2", // change to md:col-span-2
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Backend Development",
-    desc: "NodeJs • ExpressJs • PostgreSQL • SQLServer •  Spring Boot • Java • PHP • Git • Firebase • Cloudinary • RESTful APIs ",
+    title: t("experienceFour.title"),
+    desc: t("experienceFour.description"),
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
@@ -243,11 +243,11 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    url:"https://github.com/leonardoGit99"
+    url: "https://github.com/leonardoGit99"
   },
   {
     id: 2,
     img: "/link.svg",
-    url:"https://www.linkedin.com/in/leonardo-fuentes-claros-4a425b186/"
+    url: "https://www.linkedin.com/in/leonardo-fuentes-claros-4a425b186/"
   },
 ];
