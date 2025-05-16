@@ -4,6 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from '../../i18n/routing';
 import { notFound } from "next/navigation";
 import "../../app/globals.css";
+import { ModalProvider } from "@/components/ui/animatedModal";
 
 export const metadata: Metadata = {
   title: "Leonardo Fuentes Claros Portfolio",
@@ -34,7 +35,9 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
-            {children}
+            <ModalProvider>
+              {children}
+            </ModalProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

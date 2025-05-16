@@ -1,4 +1,5 @@
-import React, { use } from 'react'
+"use client"
+import React, { useEffect } from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import Link from 'next/link'
@@ -10,9 +11,19 @@ import profilePhoto from "../../public/leonardo-fuentes-claros.webp";
 import CustomTypeAnimation from '@/components/ui/CustomTypeAnimation';
 import VisitCounter from './VisitCounter'
 import { useTranslations } from 'next-intl'
+import { useModal } from './ui/animatedModal'
 
 function Hero() {
   const t = useTranslations('hero');
+
+  const { setOpen } = useModal();
+  useEffect(() => {
+    const hasSeenModal = sessionStorage.getItem("languageModalShown");
+    if (!hasSeenModal) {
+      setOpen(true);
+    }
+  }, []);
+
   return (
     <section className='pb-20'> {/* pt-36 */}
       <div>
