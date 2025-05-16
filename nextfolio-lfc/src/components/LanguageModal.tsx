@@ -19,10 +19,10 @@ export function LanguageModal() {
   const handleSelect = (lang: string) => {
     if (lang == "es") {
       window.location.href = "/es";
-      sessionStorage.setItem("languageModalShown", "true");
+      localStorage.setItem("languageModalShown", "true");
     } else {
       window.location.href = "/en";
-      sessionStorage.setItem("languageModalShown", "true");
+      localStorage.setItem("languageModalShown", "true");
     }
     setOpen(false);
   };

@@ -18,7 +18,7 @@ function Hero() {
 
   const { setOpen } = useModal();
   useEffect(() => {
-    const hasSeenModal = sessionStorage.getItem("languageModalShown");
+    const hasSeenModal = localStorage.getItem("languageModalShown");
     if (!hasSeenModal) {
       setOpen(true);
     }
