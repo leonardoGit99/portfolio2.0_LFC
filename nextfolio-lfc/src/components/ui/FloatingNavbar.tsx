@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getNavItems } from "@/data";
+import { IoLanguage } from 'react-icons/io5';
+import { useModal } from '../ui/animatedModal';
 
 export const FloatingNav = ({
   className,
@@ -22,6 +24,8 @@ export const FloatingNav = ({
 
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
+  // Language Modal
+  const { setOpen } = useModal();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -40,6 +44,9 @@ export const FloatingNav = ({
     }
   });
 
+  const handleLanguageClick = () => {
+    setOpen(true);
+  }
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -77,6 +84,10 @@ export const FloatingNav = ({
             <span className="text-xs sm:text-sm lg:text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
+        <IoLanguage
+          className="relative  hover:cursor-pointer  hover:dark:hover:text-neutral-300 hover:text-neutral-500"
+          onClick={() => handleLanguageClick()}
+        />
       </motion.div>
     </AnimatePresence>
   );
