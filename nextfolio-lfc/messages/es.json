@@ -125,5 +125,12 @@
         "description": "¡Aquí es donde el trabajo cobra vida! Usando el diseño y las funcionalidades aprobadas, convertiré todo en código funcional, creando tu sitio web desde cero."
       }
     }
+  },
+  "contact": {
+    "sectionTitlePrefix": "¿Listo para llevar ",
+    "sectionTitleHighlight": "tu",
+    "sectionTitlePostfix": "presencia digital al siguiente nivel?",
+    "subtitle": "Contáctame y conversemos sobre cómo puedo ayudarte a alcanzar tus objetivos",
+    "buttonLabel": "Pongámonos en contacto"
   }
 }
