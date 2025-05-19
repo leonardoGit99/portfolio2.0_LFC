@@ -1,12 +1,22 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import MagicBtn from './ui/MagicBtn'
 import { FaLocationArrow } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
+import { Drawer } from './ui/drawer'
 
 function Contact() {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleDrawerOpen = () => {
+    setIsOpen(true);
+  }
+  const onClose = () => {
+    setIsOpen(false);
+  }
   const handleContactClick = () => {
-    window.open('mailto:leonardofuentesclaros@gmail.com')
+    // window.open('mailto:leonardofuentesclaros@gmail.com')
+    handleDrawerOpen();
+    console.log("Contact button clicked");
   }
   const t = useTranslations('contact');
   return (
@@ -30,6 +40,14 @@ function Contact() {
             position='right'
           />
         </a>
+        <Drawer
+          handleDrawerOpen={handleDrawerOpen}
+          onClose={onClose}
+          isOpen={isOpen}
+          title="Contact Me"
+        >
+          Content
+        </Drawer>
       </div>
     </section>
   )
