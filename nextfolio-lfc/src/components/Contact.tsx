@@ -4,6 +4,7 @@ import MagicBtn from './ui/MagicBtn'
 import { FaLocationArrow } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
 import { Drawer } from './ui/drawer'
+import { ContactForm } from './ContactForm'
 
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,9 +45,9 @@ function Contact() {
           handleDrawerOpen={handleDrawerOpen}
           onClose={onClose}
           isOpen={isOpen}
-          title="Contact Me"
+          title={" "}
         >
-          Content
+          <ContactForm />
         </Drawer>
       </div>
     </section>

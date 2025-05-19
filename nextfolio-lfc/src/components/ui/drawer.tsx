@@ -31,7 +31,7 @@ export const Drawer: React.FC<DrawerProps> = ({
         <>
           {/* Overlay */}
           <motion.div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="fixed inset-0 bg-black/70 z-40"
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -40,16 +40,15 @@ export const Drawer: React.FC<DrawerProps> = ({
 
           {/* Drawer */}
           <motion.div
-            className={`fixed top-0 ${sideClass} h-full w-96 bg-white shadow-2xl z-50 p-6 text-black-200`}
+            className={`fixed top-0 ${sideClass} h-full w-full md:w-[28rem] bg-white shadow-2xl z-50 p-0 text-white-200`}
             initial={{ x: initialX }}
             animate={{ x: 0 }}
             exit={{ x: initialX }}
             transition={{ type: "tween", duration: 0.4 }}
           >
-            <div className="flex justify-between items-center mb-4">
-              {title && <h2 className="text-lg font-semibold text-black-100">{title}</h2>}
+            <div className="absolute right-5 top-4 md:right-10 md:top-8 m-0">
               <button onClick={onClose}>
-                <IoClose className="text-black-200 text-xl" />
+                <IoClose className="text-white text-xl" />
               </button>
             </div>
             {children}
