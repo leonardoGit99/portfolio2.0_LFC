@@ -7,12 +7,28 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
   useEffect(() => {
     const fetchVisits = async () => {
       try {
-        const response = await fetch("/api/visits");
-        if (!response.ok) {
-          throw new Error("Failed to fetch visit count");
+        // Verificar si ya se registró la visita en esta sesión
+        const hasVisited = sessionStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+          const response = await fetch("/api/visits");
+          if (!response.ok) {
+            throw new Error("Failed to fetch visit count");
+          }
+          const data: { visits: number } = await response.json();
+          setVisitCount(data.visits);
+
+          // Marcar como visitado
+          sessionStorage.setItem("hasVisited", "true");
+        } else {
+          // Solo obtener el número sin incrementar
+          const response = await fetch("/api/awake", { method: "GET" });
+          if (response.ok) {
+            const data: { visits: number } = await response.json();
+            setVisitCount(data.visits);
+          }
         }
-        const data: { visits: number } = await response.json();
-        setVisitCount(data.visits);
+
       } catch (error) {
         console.error(error);
       }
@@ -23,8 +39,8 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
 
   return (
     <div>
-      <h2 className="uppercase tracking-widest text-xs text-center text-blue-100  max-w-80">
-        {viewsLabel}: <span className='text-[#A0E7FF] font-semibold'> {visitCount !== null ? visitCount : loadingLabel} </span>
+      <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+        {viewsLabel}: <span className="text-[#A0E7FF] font-semibold"> {visitCount !== null ? visitCount : loadingLabel} </span>
       </h2>
     </div>
   );
