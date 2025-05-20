@@ -95,11 +95,11 @@
     },
     "experienceTwo": {
       "title": "Desarrollador Frontend",
-      "description": "Trabajé con el equipo seleccionado de No Country, compuesto por desarrolladores, diseñadores UX/UI, especialistas en QA y un líder de equipo de distintos países, para desarrollar una plataforma web responsiva para una escuela secundaria de Argentina."
+      "description": "Trabajé con el equipo seleccionado de No Country, compuesto por desarrolladores, diseñadores UX/UI, especialistas en QA y un líder de equipo de distintos países con el objetivo de desarrollar una plataforma web responsiva para una escuela secundaria de Argentina."
     },
     "experienceThree": {
-      "title": "Desarollo Frontend",
-      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand"
+      "title": "Desarrollo Frontend",
+      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • AceternityUI • Bootstrap • Cloudinary • Figma • Redux • Zustand"
     },
     "experienceFour": {
       "title": "Desarrollo Backend",

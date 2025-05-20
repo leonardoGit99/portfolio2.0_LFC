@@ -3,9 +3,9 @@
     "mainTitle": "Welcome to my portfolio",
     "typeAnimationText": {
       "staticOne": "Hi, I'm Leonardo, ",
-      "animationOne": "a Systems Engineer",
-      "animationTwo": "a Software Developer",
-      "animationThree": "Postgradute in IT Security",
+      "animationOne": "a Systems Engineer.",
+      "animationTwo": "a Software Developer.",
+      "animationThree": "Postgradute in IT Security.",
       "staticTwo": ""
     },
     "tagline": "CRAFTING DIGITAL EXPERIENCES",
@@ -99,7 +99,7 @@
     },
     "experienceThree": {
       "title": "Frontend Development",
-      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • Bootstrap • Cloudinary Figma • Redux • Zustand"
+      "description": "JavaScript • TypeScript • ReactJs • NextJs • Tailwind CSS • Ant Design • AceternityUI • Bootstrap • Cloudinary • Figma • Redux • Zustand"
     },
     "experienceFour": {
       "title": "Backend Development",
