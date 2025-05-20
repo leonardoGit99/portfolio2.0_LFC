@@ -106,10 +106,10 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
-            <Label htmlFor="firstname">Name(s)</Label>
+            <Label htmlFor="name">Name(s)</Label>
             <Input
-              id="firstname"
-              name="firstname"
+              id="name"
+              name="name"
               placeholder="Leonardo"
               type="text"
               value={data.name}
