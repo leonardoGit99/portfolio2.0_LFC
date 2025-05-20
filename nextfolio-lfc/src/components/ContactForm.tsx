@@ -107,21 +107,59 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" name="firstname" placeholder="Leonardo" type="text" value={data.firstname} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
+            <Input
+              id="firstname"
+              name="firstname"
+              placeholder="Leonardo"
+              type="text"
+              value={data.firstname}
+              onChange={(e) => { handleInputChange(e) }}
+              disabled={sendState.loading || sendState.success}
+              maxLength={50}
+              minLength={3}
+            />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" name="lastname" placeholder="Fuentes Claros" type="text" value={data.lastname} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
+            <Input
+              id="lastname"
+              name="lastname"
+              placeholder="Fuentes Claros"
+              type="text"
+              value={data.lastname}
+              onChange={(e) => { handleInputChange(e) }}
+              disabled={sendState.loading || sendState.success}
+              maxLength={50} minLength={3}
+            />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email address</Label>
-          <Input id="email" name="email" placeholder="leonardofuentesclaros@gmail.com" type="email" value={data.email} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
+          <Input
+            id="email"
+            name="email"
+            placeholder="leonardofuentesclaros@gmail.com"
+            type="email"
+            value={data.email}
+            onChange={(e) => { handleInputChange(e) }}
+            disabled={sendState.loading || sendState.success}
+            maxLength={254}
+            minLength={5}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="subject">Subject</Label>
-          <Input id="subject" name="subject" placeholder="I require your services to develop..." type="text" value={data.subject} onChange={(e) => { handleInputChange(e) }}
-            disabled={sendState.loading || sendState.success} />
+          <Input
+            id="subject"
+            name="subject"
+            placeholder="I require your services to develop..."
+            type="text"
+            value={data.subject}
+            onChange={(e) => { handleInputChange(e) }}
+            disabled={sendState.loading || sendState.success}
+            maxLength={150}
+            minLength={5}
+          />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Message</Label>
@@ -133,29 +171,37 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
             className="h-32"
             onChange={(e) => { handleInputChange(e) }}
             disabled={sendState.loading || sendState.success}
+            maxLength={2000}
+            minLength={10}
           />
         </LabelInputContainer>
+        {
+          data.firstname && data.lastname && data.email && data.subject && data.message
+            ? (
+              <button
+                className={cn(
+                  "relative block h-10 w-full rounded-md font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]",
+                  sendState.loading || sendState.success
+                    ? "bg-violet-500 cursor-not-allowed pointer-events-none"
+                    : "group/btn bg-gradient-to-br from-black to-neutral-600 dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900"
+                )}
+                type="submit"
+                disabled={sendState.loading || sendState.success || (data.firstname == "" && data.lastname == "" && data.email == "" && data.subject == "" && data.message == "")}
+              >
+                {sendState.success ? (
+                  <span className="flex items-center justify-center gap-2">
+                    Message sent!
+                    <IoCheckmarkCircle className="text-green-300" />
+                  </span>)
+                  : sendState.loading
+                    ? "Sending..."
+                    : "Send Message"}
+                <BottomGradient sendState={sendState} />
+              </button>
 
-        <button
-          className={cn(
-            "relative block h-10 w-full rounded-md font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]",
-            sendState.loading || sendState.success
-              ? "bg-violet-500 cursor-not-allowed pointer-events-none"
-              : "group/btn bg-gradient-to-br from-black to-neutral-600 dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900"
-          )}
-          type="submit"
-          disabled={sendState.loading || sendState.success}
-        >
-          {sendState.success ? (
-            <span className="flex items-center justify-center gap-2">
-              Message sent!
-              <IoCheckmarkCircle className="text-green-300" />
-            </span>)
-            : sendState.loading
-              ? "Sending..."
-              : "Send Message"}
-          <BottomGradient sendState={sendState} />
-        </button>
+            )
+            : (<></>)
+        }
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
       </form>
