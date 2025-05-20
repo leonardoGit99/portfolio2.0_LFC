@@ -8,10 +8,47 @@ import { TextArea } from "./ui/textarea";
 
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [data, setData] = React.useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    subject: "",
+    message: ""
+  })
+
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    console.log(data);
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      setData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        subject: "",
+        message: ""
+      })
+      alert('Message sent!');
+    } else {
+      alert('Something went wrong.');
+    }
   };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setData((prevData) => {
+      return {
+        ...prevData,
+        [name]: value
+      }
+    })
+  }
   return (
     <div className="shadow-input mx-auto w-full h-full max-w-xxl rounded-none bg-white p-4 pt-10  md:p-10 md:pt-16 dark:bg-black">
       <div className="flex items-center  space-x-2">
@@ -28,27 +65,30 @@ export function ContactForm() {
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Leonardo" type="text" />
+            <Input id="firstname" name="firstname" placeholder="Leonardo" type="text" value={data.firstname} onChange={(e) => { handleInputChange(e) }} />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Fuentes Claros" type="text" />
+            <Input id="lastname" name="lastname" placeholder="Fuentes Claros" type="text" value={data.lastname} onChange={(e) => { handleInputChange(e) }} />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email address</Label>
-          <Input id="email" placeholder="leonardofuentesclaros@gmail.com" type="email" />
+          <Input id="email" name="email" placeholder="leonardofuentesclaros@gmail.com" type="email" value={data.email} onChange={(e) => { handleInputChange(e) }} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="subject">Subject</Label>
-          <Input id="subject" placeholder="I require your services to develop..." type="text" />
+          <Input id="subject" name="subject" placeholder="I require your services to develop..." type="text" value={data.subject} onChange={(e) => { handleInputChange(e) }} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Message</Label>
           <TextArea
             id="message"
+            name="message"
             placeholder="Hey, I want to work together due to..."
+            value={data.message}
             className="h-32"
+            onChange={(e) => { handleInputChange(e) }}
           />
         </LabelInputContainer>
 
