@@ -8,7 +8,7 @@ import {
   ModalFooter,
   ModalTrigger,
   useModal,
-} from "../../src/components/ui/animatedModal";
+} from "./ui/animatedLanguageModal";
 
 import { motion } from "framer-motion";
 import MagicBtn from "./ui/MagicBtn";

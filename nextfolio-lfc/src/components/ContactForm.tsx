@@ -3,7 +3,7 @@ import React from "react";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { cn } from "@/lib/utils";
-import { IoChatbox } from 'react-icons/io5';
+import { IoChatbox, IoCheckmarkCircle } from 'react-icons/io5';
 import { TextArea } from "./ui/textarea";
 
 
@@ -16,27 +16,58 @@ export function ContactForm() {
     message: ""
   })
 
+  const [sendState, setSendState] = React.useState({
+    loading: false,
+    success: false,
+    error: false
+  })
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(data);
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
+
+    // Activar loading al iniciar
+    setSendState({
+      loading: true,
+      success: false,
+      error: false
     });
 
-    if (res.ok) {
-      setData({
-        firstname: "",
-        lastname: "",
-        email: "",
-        subject: "",
-        message: ""
-      })
-      alert('Message sent!');
-    } else {
-      alert('Something went wrong.');
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        setData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+
+        setSendState({
+          loading: false,
+          success: true,
+          error: false
+        });
+
+      } else {
+        setSendState({
+          loading: false,
+          success: false,
+          error: true
+        });
+      }
+    } catch (error) {
+      console.error("Error sending contact form:", error);
+      setSendState({
+        loading: false,
+        success: false,
+        error: true
+      });
     }
   };
 
@@ -95,8 +126,16 @@ export function ContactForm() {
         <button
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
+          disabled={sendState.loading || sendState.success}
         >
-          Send Message &rarr;
+          {sendState.success ? (
+            <span className="flex items-center justify-center gap-2">
+              Message sent!
+              <IoCheckmarkCircle className="text-green-500"/>
+            </span>)
+            : sendState.loading
+              ? "Sending..."
+              : "Send Message"}
           <BottomGradient />
         </button>
 

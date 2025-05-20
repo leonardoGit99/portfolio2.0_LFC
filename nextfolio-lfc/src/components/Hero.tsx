@@ -11,7 +11,7 @@ import profilePhoto from "../../public/leonardo-fuentes-claros.webp";
 import CustomTypeAnimation from '@/components/ui/CustomTypeAnimation';
 import VisitCounter from './VisitCounter'
 import { useTranslations } from 'next-intl'
-import { useModal } from './ui/animatedModal'
+import { useModal } from './ui/animatedLanguageModal'
 
 function Hero() {
   const t = useTranslations('hero');

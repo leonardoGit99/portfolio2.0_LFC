@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getNavItems } from "@/data";
 import { IoLanguage } from 'react-icons/io5';
-import { useModal } from '../ui/animatedModal';
+import { useModal } from './animatedLanguageModal';
 
 export const FloatingNav = ({
   className,

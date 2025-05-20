@@ -4,7 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from '../../i18n/routing';
 import { notFound } from "next/navigation";
 import "../../app/globals.css";
-import { ModalProvider } from "@/components/ui/animatedModal";
+import { ModalProvider } from "@/components/ui/animatedLanguageModal";
 
 export const metadata: Metadata = {
   title: "Leonardo Fuentes Claros Portfolio",
