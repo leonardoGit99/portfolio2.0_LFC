@@ -24,7 +24,7 @@ type DrawerProps = {
 type Props = DrawerProps & ContactFormProps;
 export function ContactForm({ sendState, setSendState, onClose }: Props) {
   const [data, setData] = React.useState({
-    firstname: "",
+    name: "",
     lastname: "",
     email: "",
     subject: "",
@@ -51,7 +51,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
 
       if (res.ok) {
         setData({
-          firstname: "",
+          name: "",
           lastname: "",
           email: "",
           subject: "",
@@ -106,13 +106,13 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
-            <Label htmlFor="firstname">First name</Label>
+            <Label htmlFor="firstname">Name(s)</Label>
             <Input
               id="firstname"
               name="firstname"
               placeholder="Leonardo"
               type="text"
-              value={data.firstname}
+              value={data.name}
               onChange={(e) => { handleInputChange(e) }}
               disabled={sendState.loading || sendState.success}
               maxLength={50}
@@ -176,7 +176,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
           />
         </LabelInputContainer>
         {
-          data.firstname && data.lastname && data.email && data.subject && data.message
+          data.name && data.lastname && data.email && data.subject && data.message
             ? (
               <button
                 className={cn(
@@ -186,7 +186,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
                     : "group/btn bg-gradient-to-br from-black to-neutral-600 dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900"
                 )}
                 type="submit"
-                disabled={sendState.loading || sendState.success || (data.firstname == "" && data.lastname == "" && data.email == "" && data.subject == "" && data.message == "")}
+                disabled={sendState.loading || sendState.success || (data.name == "" && data.lastname == "" && data.email == "" && data.subject == "" && data.message == "")}
               >
                 {sendState.success ? (
                   <span className="flex items-center justify-center gap-2">
