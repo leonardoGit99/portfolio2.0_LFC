@@ -3,9 +3,10 @@
     "mainTitle": "Bienvenido a mi portafolio",
     "typeAnimationText": {
       "staticOne": "Hola, soy Leonardo, ",
-      "animationOne": "ingeniero de sistemas",
-      "animationTwo": "desarrollador de software",
-      "staticTwo": "establecido en Bolivia."
+      "animationOne": "Ing. de Sistemas.",
+      "animationTwo": "Desarrollador de Software.",
+      "animationThree": "Posgr. en Seguridad TI.",
+      "staticTwo": ""
     },
     "tagline": "CREANDO EXPERIENCIAS DIGITALES",
     "viewsLabel": "VISITAS",

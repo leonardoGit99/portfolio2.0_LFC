@@ -55,7 +55,8 @@ function Hero() {
               <CustomTypeAnimation
                 sequences={[
                   t("typeAnimationText.animationOne"),
-                  t("typeAnimationText.animationTwo")
+                  t("typeAnimationText.animationTwo"),
+                  t("typeAnimationText.animationThree")
                 ]}
                 staticText={t("typeAnimationText.animationTwo")}
               />

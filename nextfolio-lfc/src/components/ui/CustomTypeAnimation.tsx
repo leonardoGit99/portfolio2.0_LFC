@@ -2,9 +2,9 @@
 import { useState, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 
-function CustomTypeAnimation({ sequences, staticText,  }: { sequences: string[], staticText: string }) {
+function CustomTypeAnimation({ sequences, staticText, }: { sequences: string[], staticText: string }) {
   const [isMounted, setIsMounted] = useState(false);
-  const delayTime = 3500; // Delay time before mounting
+  const delayTime = 3000; // Delay time before mounting
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -14,7 +14,7 @@ function CustomTypeAnimation({ sequences, staticText,  }: { sequences: string[],
     return () => clearTimeout(timeout); // Cleanup on unmount
   }, [delayTime]);
 
-  
+
   if (!isMounted) {
     return <span>{staticText}|</span>; // O algún componente de carga
   }
@@ -23,9 +23,11 @@ function CustomTypeAnimation({ sequences, staticText,  }: { sequences: string[],
     <TypeAnimation
       sequence={[
         sequences[0],
-        1800, 
+        1800,
+        sequences[2],
+        1800,
         sequences[1],
-        1800, 
+        1800,
       ]}
       wrapper="span"
       speed={73}
