@@ -11,7 +11,7 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
         const hasVisited = sessionStorage.getItem("hasVisited");
 
         if (!hasVisited) {
-          const response = await fetch("/api/visits/increment", { method: "GET" });
+          const response = await fetch("/api/visits/increment");
           if (!response.ok) {
             throw new Error("Failed to fetch visit increment");
           }
