@@ -11,9 +11,9 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
         const hasVisited = sessionStorage.getItem("hasVisited");
 
         if (!hasVisited) {
-          const response = await fetch("/api/visits");
+          const response = await fetch("/api/visits/increment", { method: "GET" });
           if (!response.ok) {
-            throw new Error("Failed to fetch visit count");
+            throw new Error("Failed to fetch visit increment");
           }
           const data: { visits: number } = await response.json();
           setVisitCount(data.visits);
@@ -22,7 +22,7 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
           sessionStorage.setItem("hasVisited", "true");
         } else {
           // Solo obtener el número sin incrementar
-          const response = await fetch("/api/awake", { method: "GET" });
+          const response = await fetch("/api/visits/count", { method: "GET" });
           if (response.ok) {
             const data: { visits: number } = await response.json();
             setVisitCount(data.visits);
