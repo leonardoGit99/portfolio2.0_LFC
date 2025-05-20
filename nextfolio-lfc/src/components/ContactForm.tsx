@@ -6,8 +6,23 @@ import { cn } from "@/lib/utils";
 import { IoChatbox, IoCheckmarkCircle } from 'react-icons/io5';
 import { TextArea } from "./ui/textarea";
 
+type SendState = {
+  loading: boolean;
+  success: boolean;
+  error: boolean;
+};
 
-export function ContactForm() {
+type ContactFormProps = {
+  sendState: SendState;
+  setSendState: React.Dispatch<React.SetStateAction<SendState>>;
+};
+
+type DrawerProps = {
+  onClose: () => void;
+}
+
+type Props = DrawerProps & ContactFormProps;
+export function ContactForm({ sendState, setSendState, onClose }: Props) {
   const [data, setData] = React.useState({
     firstname: "",
     lastname: "",
@@ -16,16 +31,11 @@ export function ContactForm() {
     message: ""
   })
 
-  const [sendState, setSendState] = React.useState({
-    loading: false,
-    success: false,
-    error: false
-  })
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Activar loading al iniciar
+    // Activa loading al iniciar
     setSendState({
       loading: true,
       success: false,
@@ -54,6 +64,7 @@ export function ContactForm() {
           error: false
         });
 
+        onClose();
       } else {
         setSendState({
           loading: false,
@@ -96,20 +107,21 @@ export function ContactForm() {
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" name="firstname" placeholder="Leonardo" type="text" value={data.firstname} onChange={(e) => { handleInputChange(e) }} />
+            <Input id="firstname" name="firstname" placeholder="Leonardo" type="text" value={data.firstname} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" name="lastname" placeholder="Fuentes Claros" type="text" value={data.lastname} onChange={(e) => { handleInputChange(e) }} />
+            <Input id="lastname" name="lastname" placeholder="Fuentes Claros" type="text" value={data.lastname} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email address</Label>
-          <Input id="email" name="email" placeholder="leonardofuentesclaros@gmail.com" type="email" value={data.email} onChange={(e) => { handleInputChange(e) }} />
+          <Input id="email" name="email" placeholder="leonardofuentesclaros@gmail.com" type="email" value={data.email} onChange={(e) => { handleInputChange(e) }} disabled={sendState.loading || sendState.success} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="subject">Subject</Label>
-          <Input id="subject" name="subject" placeholder="I require your services to develop..." type="text" value={data.subject} onChange={(e) => { handleInputChange(e) }} />
+          <Input id="subject" name="subject" placeholder="I require your services to develop..." type="text" value={data.subject} onChange={(e) => { handleInputChange(e) }}
+            disabled={sendState.loading || sendState.success} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Message</Label>
@@ -120,23 +132,29 @@ export function ContactForm() {
             value={data.message}
             className="h-32"
             onChange={(e) => { handleInputChange(e) }}
+            disabled={sendState.loading || sendState.success}
           />
         </LabelInputContainer>
 
         <button
-          className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+          className={cn(
+            "relative block h-10 w-full rounded-md font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]",
+            sendState.loading || sendState.success
+              ? "bg-violet-500 cursor-not-allowed pointer-events-none"
+              : "group/btn bg-gradient-to-br from-black to-neutral-600 dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900"
+          )}
           type="submit"
           disabled={sendState.loading || sendState.success}
         >
           {sendState.success ? (
             <span className="flex items-center justify-center gap-2">
               Message sent!
-              <IoCheckmarkCircle className="text-green-500"/>
+              <IoCheckmarkCircle className="text-green-300" />
             </span>)
             : sendState.loading
               ? "Sending..."
               : "Send Message"}
-          <BottomGradient />
+          <BottomGradient sendState={sendState} />
         </button>
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
@@ -145,7 +163,9 @@ export function ContactForm() {
   );
 }
 
-const BottomGradient = () => {
+const BottomGradient = ({ sendState }: { sendState: { loading: boolean; success: boolean } }) => {
+  const disabled = sendState.loading || sendState.success;
+  if (disabled) return null;
   return (
     <>
       <span className="absolute inset-x-0 -bottom-px block h-px w-full bg-gradient-to-r from-transparent via-violet-400 to-transparent opacity-0 transition duration-500 group-hover/btn:opacity-100" />
