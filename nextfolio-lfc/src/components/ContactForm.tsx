@@ -3,7 +3,7 @@ import React from "react";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { cn } from "@/lib/utils";
-import { IoChatbox, IoCheckmarkCircle } from 'react-icons/io5';
+import { IoArrowForward, IoArrowForwardCircle, IoArrowForwardCircleOutline, IoArrowForwardCircleSharp, IoChatbox, IoCheckmarkCircle, IoSend, IoSendOutline, IoSendSharp, IoShare } from 'react-icons/io5';
 import { TextArea } from "./ui/textarea";
 
 type SendState = {
@@ -92,7 +92,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
     })
   }
   return (
-    <div className="shadow-input mx-auto w-full h-full max-w-xxl rounded-none bg-white p-4 pt-10  md:p-10 md:pt-16 dark:bg-black">
+    <div className="shadow-input mx-auto w-full h-full max-w-xxl rounded-none bg-white p-4 pt-10  md:p-10 md:pt-16 dark:bg-[#000111]">
       <div className="flex items-center  space-x-2">
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
           Contact me
@@ -182,7 +182,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
                 className={cn(
                   "relative block h-10 w-full rounded-md font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]",
                   sendState.loading || sendState.success
-                    ? "bg-violet-500 cursor-not-allowed pointer-events-none"
+                    ? "bg-violet-400 cursor-not-allowed pointer-events-none"
                     : "group/btn bg-gradient-to-br from-black to-neutral-600 dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900"
                 )}
                 type="submit"
@@ -195,7 +195,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
                   </span>)
                   : sendState.loading
                     ? "Sending..."
-                    : "Send Message"}
+                    : <div className="flex justify-center items-center gap-3 ">Send Message <IoSendSharp  /></div>}
                 <BottomGradient sendState={sendState} />
               </button>
 
