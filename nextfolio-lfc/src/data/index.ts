@@ -1,23 +1,31 @@
+import { IoPerson, IoFolderOpen, IoRibbon, IoBriefcase, IoMail } from "react-icons/io5";
+
+
 export const getNavItems = (t: (key: string) => string) => [
   {
     name: t("about"),
     link: "#about",
+    icon: IoPerson ,
   },
   {
     name: t("projects"),
     link: "#projects",
+    icon: IoFolderOpen ,
   },
   {
     name: t("certifications"),
     link: "#certifications",
+    icon: IoRibbon ,
   },
   {
     name: t("experience"),
     link: "#experience",
+    icon: IoBriefcase ,
   },
   {
     name: t("contact"),
     link: "#contact",
+    icon: IoMail ,
   },
 ];
 
