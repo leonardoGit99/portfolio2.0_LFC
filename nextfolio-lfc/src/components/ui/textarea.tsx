@@ -1,4 +1,3 @@
-// TextArea component extends from shadcnui - https://ui.shadcn.com/docs/components/textarea
 "use client";
 import * as React from "react";
 import { cn } from "@/lib/utils";

@@ -1,6 +1,5 @@
 "use client"
 import React from 'react';
-import Lottie from 'react-lottie';
 import MagicBtn from './MagicBtn';
 import { IoCloudDownloadOutline, } from 'react-icons/io5';
 

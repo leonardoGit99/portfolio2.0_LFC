@@ -1,7 +1,6 @@
 import React from 'react'
 import { getProjects } from '@/data/index'
 import { PinContainer } from './ui/PinContainer'
-import { FaLocationArrow } from 'react-icons/fa'
 import { FaArrowRight } from 'react-icons/fa6'
 import { useTranslations } from 'next-intl'
 function Projects() {

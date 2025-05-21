@@ -6,7 +6,6 @@ import { IoClose } from 'react-icons/io5';
 
 interface DrawerProps {
   isOpen: boolean;
-  handleDrawerOpen: () => void;
   onClose: () => void;
   title?: string;
   children: React.ReactNode;
@@ -15,7 +14,6 @@ interface DrawerProps {
 
 export const Drawer: React.FC<DrawerProps> = ({
   isOpen,
-  handleDrawerOpen,
   onClose,
   title,
   children,

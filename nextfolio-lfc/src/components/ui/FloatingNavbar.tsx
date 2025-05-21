@@ -21,11 +21,11 @@ export const FloatingNav = ({
   //Translations
   const t = useTranslations('nav')
   const navItems = getNavItems(t)
+  // Language Modal
+  const { setOpen } = useModal();
 
   const { scrollYProgress } = useScroll();
   const [visible, setVisible] = useState(true);
-  // Language Modal
-  const { setOpen } = useModal();
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number

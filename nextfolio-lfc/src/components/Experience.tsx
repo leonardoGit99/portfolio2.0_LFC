@@ -1,5 +1,5 @@
-import { getWorkExperience } from '@/data'
 import React from 'react'
+import { getWorkExperience } from '@/data'
 import { Button } from './ui/MovingBorder'
 import { useTranslations } from 'next-intl'
 

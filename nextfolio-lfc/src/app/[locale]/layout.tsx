@@ -8,7 +8,7 @@ import { ModalProvider } from "@/components/ui/animatedLanguageModal";
 
 export const metadata: Metadata = {
   title: "Leonardo Fuentes Claros Portfolio",
-  description: "Portfolio of LFC - Nextjs - TailwindCSS - Typescript - Frame Motion - Acernity UI - Next themes - React - react icons",
+  description: "Portfolio of LFC - Nextjs - TailwindCSS - Typescript - Frame Motion - Aceternity UI - React - react icons",
 };
 
 export default async function RootLayout({
@@ -35,6 +35,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider>
+            {/*  We need this provider to use modal in the entire app */}
             <ModalProvider>
               {children}
             </ModalProvider>

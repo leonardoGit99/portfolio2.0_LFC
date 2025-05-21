@@ -8,8 +8,6 @@ import { ContactForm } from './ContactForm'
 import { IoCheckmarkCircle } from 'react-icons/io5';
 
 
-
-
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const handleDrawerOpen = () => {
@@ -64,7 +62,6 @@ function Contact() {
           )
         }
         <Drawer
-          handleDrawerOpen={handleDrawerOpen}
           onClose={onClose}
           isOpen={isOpen}
           title={" "}

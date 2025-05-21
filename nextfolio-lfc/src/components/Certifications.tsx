@@ -1,6 +1,6 @@
 import React from 'react'
 import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
-import { companies, getCertifications } from '@/data'
+import { getCertifications } from '@/data'
 import { useTranslations } from 'next-intl'
 
 function Certifications() {
