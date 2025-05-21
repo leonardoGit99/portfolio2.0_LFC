@@ -51,7 +51,7 @@ function Contact() {
         {
           sendState.success ? (
             <div className='flex items-center justify-center text-white-200 rounded-full gap-2 font-semibold text-xl h-12'>
-              Message sent! I'll contact you A.S.P <IoCheckmarkCircle className='text-green-400'/>
+              {t("messageSent")} <IoCheckmarkCircle className='text-green-400' />
             </div>
           ) : (
             <a onClick={() => handleContactClick()}>
@@ -69,7 +69,23 @@ function Contact() {
           isOpen={isOpen}
           title={" "}
         >
-          <ContactForm sendState={sendState} setSendState={setSendState} onClose={onClose} />
+          <ContactForm
+            sendState={sendState}
+            setSendState={setSendState}
+            onClose={onClose}
+            title={t("contactForm.title")}
+            subtitle={t("contactForm.subtitle")}
+            nameLabel={t("contactForm.nameLabel")}
+            lastNameLabel={t("contactForm.lastNameLabel")}
+            emailLabel={t("contactForm.emailLabel")}
+            subjectLabel={t("contactForm.subjectLabel")}
+            messageLabel={t("contactForm.messageLabel")}
+            subjectPlaceHolder={t("contactForm.subjectPlaceHolder")}
+            messagePlaceHolder={t("contactForm.messagePlaceHolder")}
+            sendBtnLabel={t("contactForm.sendBtnLabel")}
+            sendingBtnLabel={t("contactForm.sendingBtnLabel")}
+            sentBtnLabel={t("contactForm.sentBtnLabel")}
+          />
         </Drawer>
       </div>
     </section>

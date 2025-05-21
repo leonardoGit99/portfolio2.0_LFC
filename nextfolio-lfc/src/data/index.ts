@@ -277,3 +277,4 @@ export const socialMedia = [
     url: "https://www.linkedin.com/in/leonardo-fuentes-claros-4a425b186/"
   },
 ];
+

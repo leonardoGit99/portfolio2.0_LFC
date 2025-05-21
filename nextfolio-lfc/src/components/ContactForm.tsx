@@ -3,7 +3,7 @@ import React from "react";
 import { Label } from "../components/ui/label";
 import { Input } from "../components/ui/input";
 import { cn } from "@/lib/utils";
-import { IoArrowForward, IoArrowForwardCircle, IoArrowForwardCircleOutline, IoArrowForwardCircleSharp, IoChatbox, IoCheckmarkCircle, IoSend, IoSendOutline, IoSendSharp, IoShare } from 'react-icons/io5';
+import { IoChatbox, IoCheckmarkCircle, IoSendSharp } from 'react-icons/io5';
 import { TextArea } from "./ui/textarea";
 
 type SendState = {
@@ -15,14 +15,27 @@ type SendState = {
 type ContactFormProps = {
   sendState: SendState;
   setSendState: React.Dispatch<React.SetStateAction<SendState>>;
+  title: string;
+  subtitle: string;
+  nameLabel: string;
+  lastNameLabel: string;
+  emailLabel: string;
+  subjectLabel: string;
+  messageLabel: string;
+  subjectPlaceHolder: string;
+  messagePlaceHolder: string;
+  sendBtnLabel: string;
+  sendingBtnLabel: string;
+  sentBtnLabel: string;
 };
 
 type DrawerProps = {
   onClose: () => void;
 }
 
+
 type Props = DrawerProps & ContactFormProps;
-export function ContactForm({ sendState, setSendState, onClose }: Props) {
+export function ContactForm({ sendState, setSendState, title, subtitle, nameLabel, lastNameLabel, emailLabel, subjectLabel, messageLabel, subjectPlaceHolder, messagePlaceHolder, sendBtnLabel, sendingBtnLabel, sentBtnLabel, onClose }: Props) {
   const [data, setData] = React.useState({
     name: "",
     lastname: "",
@@ -95,18 +108,18 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
     <div className="shadow-input mx-auto w-full h-full max-w-xxl rounded-none bg-white p-4 pt-10  md:p-10 md:pt-16 dark:bg-[#000111]">
       <div className="flex items-center  space-x-2">
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
-          Contact me
+          {title}
         </h2>
         <IoChatbox className="text-[#00C6FF]" />
       </div>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-500">
-        Feel free to reach out for collaborations, freelance work, or just to say hi!
+        {subtitle}
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
           <LabelInputContainer>
-            <Label htmlFor="name">Name(s)</Label>
+            <Label htmlFor="name">{nameLabel}</Label>
             <Input
               id="name"
               name="name"
@@ -120,7 +133,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
             />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
+            <Label htmlFor="lastname">{lastNameLabel}</Label>
             <Input
               id="lastname"
               name="lastname"
@@ -134,7 +147,7 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email address</Label>
+          <Label htmlFor="email">{emailLabel}</Label>
           <Input
             id="email"
             name="email"
@@ -148,11 +161,11 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="subject">Subject</Label>
+          <Label htmlFor="subject">{subjectLabel}</Label>
           <Input
             id="subject"
             name="subject"
-            placeholder="I require your services to develop..."
+            placeholder={subjectPlaceHolder}
             type="text"
             value={data.subject}
             onChange={(e) => { handleInputChange(e) }}
@@ -162,11 +175,11 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="message">Message</Label>
+          <Label htmlFor="message">{messageLabel}</Label>
           <TextArea
             id="message"
             name="message"
-            placeholder="Hey, I want to work together due to..."
+            placeholder={messagePlaceHolder}
             value={data.message}
             className="h-32"
             onChange={(e) => { handleInputChange(e) }}
@@ -190,12 +203,12 @@ export function ContactForm({ sendState, setSendState, onClose }: Props) {
               >
                 {sendState.success ? (
                   <span className="flex items-center justify-center gap-2">
-                    Message sent!
+                    {sentBtnLabel}
                     <IoCheckmarkCircle className="text-green-300" />
                   </span>)
                   : sendState.loading
-                    ? "Sending..."
-                    : <div className="flex justify-center items-center gap-3 ">Send Message <IoSendSharp  /></div>}
+                    ? sendingBtnLabel
+                    : <div className="flex justify-center items-center gap-3 ">{sendBtnLabel} <IoSendSharp /></div>}
                 <BottomGradient sendState={sendState} />
               </button>
 

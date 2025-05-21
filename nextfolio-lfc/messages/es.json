@@ -132,6 +132,21 @@
     "sectionTitleHighlight": "tu",
     "sectionTitlePostfix": "presencia digital al siguiente nivel?",
     "subtitle": "Contáctame y conversemos sobre cómo puedo ayudarte a alcanzar tus objetivos",
-    "buttonLabel": "Pongámonos en contacto"
+    "buttonLabel": "Pongámonos en contacto",
+    "messageSent": "¡Mensaje enviado! Me pondré en contacto contigo lo más antes posible.",
+    "contactForm": {
+      "title": "Contáctame",
+      "subtitle": "No dudes en escribirme para colaborar, trabajar como freelancer o simplemente saludar.",
+      "nameLabel": "Nombre(s)",
+      "lastNameLabel": "Apellido(s)",
+      "emailLabel": "Correo electrónico",
+      "subjectLabel": "Asunto",
+      "messageLabel": "Mensaje",
+      "subjectPlaceHolder": "Cuéntame brevemente de que se trata",
+      "messagePlaceHolder": "¿Qué tienes en mente?",
+      "sendBtnLabel": "Enviar Mensaje",
+      "sendingBtnLabel": "Enviando...",
+      "sentBtnLabel": "Mensaje Enviado!"
+    }
   }
 }

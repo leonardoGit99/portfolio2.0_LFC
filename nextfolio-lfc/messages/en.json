@@ -132,6 +132,21 @@
     "sectionTitleHighlight": "your",
     "sectionTitlePostfix": "digital presence to the next level?",
     "subtitle": "Reach out to me today and let's discuss how I can help you achieve your goals",
-    "buttonLabel": "Let's get in touch"
+    "buttonLabel": "Let's get in touch",
+    "messageSent": "Message sent! I'll contact you A.S.P",
+    "contactForm": {
+      "title": "Contact Me",
+      "subtitle": "Feel free to reach out for collaborations, freelance work, or just to say hi!",
+      "nameLabel": "Name(s)",
+      "lastNameLabel": "Last name",
+      "emailLabel": "Email address",
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "subjectPlaceHolder": "Briefly tell me what it's about",
+      "messagePlaceHolder": "What's on your mind?",
+      "sendBtnLabel": "Send Message",
+      "sendingBtnLabel": "Sending...",
+      "sentBtnLabel": "Message Sent!"
+    }
   }
 }
