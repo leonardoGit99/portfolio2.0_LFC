@@ -122,7 +122,7 @@ export const getProjects = (t: (key: string) => string) => [
     id: 2,
     title: t("secondProject.title"),
     description: t("secondProject.description"),
-    state: false,
+    state: true,
     img: "/taskflow.png",
     imgRotation: {
       transform: 'rotate(3deg)',
