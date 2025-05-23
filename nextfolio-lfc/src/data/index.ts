@@ -136,14 +136,14 @@ export const getProjects = (t: (key: string) => string) => [
     id: 3,
     title: t("thirdProject.title"),
     description: t("thirdProject.description"),
-    state: false,
+    state: true,
     img: "/ezrental.jpg",
     imgRotation: {
       transform: 'rotate(3deg)',
       transformOrigin: '190px 0'
     },
     iconLists: ["/re.svg", "/ant-design.svg", "/firebase.svg", "/node.svg", "/postgresql.svg", "/gdrive.svg"],
-    liveDemoLink: "https://ez-rental-kinsta-front.vercel.app",
+    liveDemoLink: "https://ez-rental-nine.vercel.app",
     GithubLink: "https://github.com/leonardoGit99/EzRental",
   },
   {
