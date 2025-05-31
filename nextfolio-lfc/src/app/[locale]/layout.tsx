@@ -51,8 +51,8 @@ export async function generateMetadata({
     metadataBase: new URL("https://leonardo-fuentes-claros.vercel.app"),
     openGraph: {
       title: isSpanish
-        ? "Leonardo Fuentes Claros | Desarrollador de Software"
-        : "Leonardo Fuentes Claros | Software Developer",
+        ? "Leonardo Fuentes Claros | Desarrollador de Software | Ingeniero de Sistemas | Posgrado en Seguridad TI" 
+        : "Leonardo Fuentes Claros | Software Developer | Systems Engineer | Postgraduate in IT Security",
       description: isSpanish
         ? "Portafolio de aplicaciones modernas desarrolladas por Leonardo Fuentes Claros."
         : "Explore Leonardo's portfolio of modern web applications built with React, Next.js, and more.",
