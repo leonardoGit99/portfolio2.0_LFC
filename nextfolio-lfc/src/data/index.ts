@@ -274,7 +274,7 @@ export const socialMedia = [
   {
     id: 2,
     img: "/link.svg",
-    url: "https://www.linkedin.com/in/leonardo-fuentes-claros-4a425b186/"
+    url: "http://www.linkedin.com/in/leonardo-fuentes-claros"
   },
 ];
 
