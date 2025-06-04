@@ -29,7 +29,7 @@ export const Drawer: React.FC<DrawerProps> = ({
         <>
           {/* Overlay */}
           <motion.div
-            className="fixed inset-0 bg-black/70 z-[2500]"
+            className="fixed inset-0 bg-black/70 z-[2500] overflow-y-visible"
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

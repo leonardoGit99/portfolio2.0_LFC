@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MagicBtn from './ui/MagicBtn'
 import { FaLocationArrow } from 'react-icons/fa'
 import { useTranslations } from 'next-intl'
@@ -10,6 +10,17 @@ import { IoCheckmarkCircle } from 'react-icons/io5';
 
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
+  return () => {
+    document.body.style.overflow = '';
+  };
+}, [isOpen]);
   const handleDrawerOpen = () => {
     setIsOpen(true);
   }
