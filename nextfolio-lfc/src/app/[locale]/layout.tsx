@@ -10,7 +10,7 @@ export async function generateMetadata({
   params,
 }: {
   params: { locale: string };
-}): Promise<Metadata> {
+}) {
   const isSpanish = params.locale === "es";
 
   return {
@@ -51,7 +51,7 @@ export async function generateMetadata({
     metadataBase: new URL("https://leonardo-fuentes-claros.vercel.app"),
     openGraph: {
       title: isSpanish
-        ? "Leonardo Fuentes Claros | Desarrollador de Software | Ingeniero de Sistemas | Posgrado en Seguridad TI" 
+        ? "Leonardo Fuentes Claros | Desarrollador de Software | Ingeniero de Sistemas | Posgrado en Seguridad TI"
         : "Leonardo Fuentes Claros | Software Developer | Systems Engineer | Postgraduate in IT Security",
       description: isSpanish
         ? "Portafolio de aplicaciones modernas desarrolladas por Leonardo Fuentes Claros."
@@ -102,11 +102,11 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 }>) {
 
   // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
+  const { locale } = params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
