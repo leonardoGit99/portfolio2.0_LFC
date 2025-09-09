@@ -68,6 +68,10 @@
     "fourthProject": {
       "title": "BettyStore",
       "description": "Un sistema de punto de venta (POS) desarrollado para una tienda local, diseñado para optimizar las ventas, gestionar el inventario y administrar eficientemente las relaciones con los clientes."
+    },
+    "fifthProject": {
+      "title": "Covertron",
+      "description": "Sitio web empresarial con un catálogo dinámico, gestionable a través de un panel administrativo que permite organizar productos por categorías y subcategorías de manera eficiente."
     }
   },
   "certifications": {

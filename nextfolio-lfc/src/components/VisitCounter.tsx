@@ -18,7 +18,7 @@ const VisitCounter: React.FC<{ viewsLabel: string, loadingLabel: string }> = ({ 
           const data: { visits: number } = await response.json();
           setVisitCount(data.visits);
 
-          // Marcar como visitado
+          // Marcar como visitado, 
           sessionStorage.setItem("hasVisited", "true");
         } else {
           // Solo obtener el número sin incrementar

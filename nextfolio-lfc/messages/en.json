@@ -68,6 +68,10 @@
     "fourthProject": {
       "title": "BettyStore",
       "description": "A Point of Sale (POS) system developed for a local store, enabling efficient sales management, inventory tracking, and customer management. "
+    },
+    "fifthProject": {
+      "title": "Covertron",
+      "description": "A corporate website featuring a dynamic product catalog, managed through an admin panel that allows efficient organization of products by categories and subcategories."
     }
   },
   "certifications": {

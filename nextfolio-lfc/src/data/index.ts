@@ -106,6 +106,20 @@ export const stackList = [[
 export const getProjects = (t: (key: string) => string) => [
   {
     id: 1,
+    title: t("fifthProject.title"),
+    description: t("fifthProject.description"),
+    state: true,
+    img: "/covertron.webp",
+    imgRotation: {
+      transform: 'rotate(2.6deg)',
+      transformOrigin: '100px 0'
+    },
+    iconLists: ["/re.svg", "/ant-design.svg", "/php.svg", "/postgresql.svg", "/firebase.svg"],
+    liveDemoLink: "https://covertron.vercel.app",
+    GithubLink: "https://github.com/leonardoGit99/covertron-server_LFC",
+  },
+  {
+    id: 2,
     title: t("firstProject.title"),
     description: t("firstProject.description"),
     state: true,
@@ -119,7 +133,7 @@ export const getProjects = (t: (key: string) => string) => [
     GithubLink: "https://github.com/No-Country-simulation/c22-22-t-webapp",
   },
   {
-    id: 2,
+    id: 3,
     title: t("secondProject.title"),
     description: t("secondProject.description"),
     state: true,
@@ -133,7 +147,7 @@ export const getProjects = (t: (key: string) => string) => [
     GithubLink: "https://github.com/leonardoGit99/pern-stack_server",
   },
   {
-    id: 3,
+    id: 4,
     title: t("thirdProject.title"),
     description: t("thirdProject.description"),
     state: true,
@@ -147,7 +161,7 @@ export const getProjects = (t: (key: string) => string) => [
     GithubLink: "https://github.com/leonardoGit99/EzRental",
   },
   {
-    id: 4,
+    id: 5,
     title: t("fourthProject.title"),
     description: t("fourthProject.description"),
     state: false,
@@ -159,7 +173,7 @@ export const getProjects = (t: (key: string) => string) => [
     iconLists: ["/re.svg", "/ant-design.svg", "/php.svg", "/mysql.svg", "/firebase.svg"],
     liveDemoLink: "https://truebettystore.000webhostapp.com",
     GithubLink: "https://github.com/leonardoGit99/BettyStore",
-  },
+  }
 ];
 
 export const getCertifications = (t: (key: string) => string) => [
