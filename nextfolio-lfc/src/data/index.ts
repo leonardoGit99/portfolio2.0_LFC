@@ -114,7 +114,7 @@ export const getProjects = (t: (key: string) => string) => [
       transform: 'rotate(2.6deg)',
       transformOrigin: '100px 0'
     },
-    iconLists: ["/re.svg", "/ant-design.svg", "/php.svg", "/postgresql.svg", "/firebase.svg"],
+    iconLists: ["/nextjs.svg", "/ts.svg", "/shadcn.png", "/express.svg","/node.svg","/cloudinary.svg","/postgresql.svg"],
     liveDemoLink: "https://covertron.vercel.app",
     GithubLink: "https://github.com/leonardoGit99/covertron-server_LFC",
   },
